@@ -1,0 +1,64 @@
+
+a{    
+    text-decoration: none;
+    color: inherit;
+}
+
+body{    
+    margin: 0;
+    padding: 0;
+    background-color: rgb(247, 247, 247);
+}
+
+.container{
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.header{    
+    height: 90px;
+    background-color: #0C0C0E;
+    color: #FFF;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul.menu{
+    display: flex;
+    list-style: none;
+}
+
+li.menu-item{
+    padding-right: 30px;    
+}
+
+.header-link{
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0.6px;    
+    /* margin: 20px 370px 20px 20px; */
+    margin: 20px 0 20px 20px;
+    flex-grow: 1;
+}
+
+.menu-link{
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+img.icon-img{
+    padding: 0 20px;
+}
