@@ -7,13 +7,16 @@ a{
 body{    
     margin: 0;
     padding: 0;
-    background-color: rgb(247, 247, 247);
+    /* background-color: rgb(247, 247, 247); */
+    background-color: bisque;
 }
 
 .container{
     width: 1440px;
     margin: 0 auto;
     padding: 0;
+
+    background-color: rgb(247,247,247);
 }
 
 .header{    
@@ -48,9 +51,8 @@ li.menu-item{
     font-style: normal;
     font-weight: 400;
     line-height: 50px;
-    letter-spacing: 0.6px;    
-    /* margin: 20px 370px 20px 20px; */
-    margin: 20px 0 20px 20px;
+    letter-spacing: 0.6px;        
+    margin: 20px 0 20px 20px;    
     flex-grow: 1;
 }
 
@@ -111,3 +113,80 @@ h2.welcomeh2{
     text-transform: uppercase;    
 }
 
+section.about{    
+    height: 837px;
+    /* background-color: #BB945F;     */
+}
+
+h2.abouth2{
+    padding: 20px 667px;
+    margin: 0;
+    text-align: center;
+    color: #0C0C0E;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+div.abouth2-underline{
+    margin: 0 auto;
+    width: 50px;
+    height: 1px;    
+    border-bottom: 1px solid #0C0C0E;    
+}
+
+.aboutheader > p{
+    width: 1440px;
+    height: 40px;
+    margin-bottom: 20px;    
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.images{
+    display: inline;
+}
+
+.images > img{
+    width: 450px;
+    height: 560px;
+    margin: 20px 0 0 20px;
+    padding: 0;
+}
+
+.pagination{
+    width: 68px;
+    /* height: 16px; */
+    margin: 40px auto 0;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: aqua; */
+}
+
+.pagination > div{
+    width: 16px;
+    height: 16px;    
+    border: 5px;
+    border-radius: 50%;        
+}
+
+div.button1{
+    background-color: #0C0C0E;
+}
+
+div.button2{
+    background-color: #BB945F;
+}
+
+div.button3{
+    background-color: #BB945F;
+}
