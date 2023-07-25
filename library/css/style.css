@@ -190,3 +190,77 @@ div.button2{
 div.button3{
     background-color: #BB945F;
 }
+
+section.favorites{    
+    height: 500px;
+    /* background-color: #BB945F;     */
+}
+
+h2.favoritesh2{
+    padding: 20px 640px;
+    margin: 0;
+    text-align: center;
+    color: #0C0C0E;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 100% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+div.favoritesh2-underline{
+    margin: 0 auto;
+    width: 50px;
+    height: 1px;    
+    border-bottom: 1px solid #0C0C0E;    
+}
+
+.favorites > p{
+    color: #000;
+    text-align: left;
+    margin-left: 20px;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+div.radio-seasons{
+    margin-top: 40px;;
+    margin-left: 20px;    
+}
+
+.favorites-label > input{
+    margin-right: 20px;
+}
+
+.favorites-label{    
+    margin-right: 90px;
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bg-description{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.book-item{
+    width: 550px;
+    height: 555px;
+}
+
+div.h3-underline{
+    margin: 0 auto;
+    width: 60px;
+    height: 1px;    
+    border-bottom: 1px solid #0C0C0E;    
+}
