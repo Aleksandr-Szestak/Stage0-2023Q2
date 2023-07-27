@@ -192,7 +192,7 @@ div.button3{
 }
 
 section.favorites{    
-    height: 500px;
+    height: 1439px;
     /* background-color: #BB945F;     */
 }
 
@@ -256,7 +256,7 @@ div.radio-seasons{
 .book-item{
     width: 550px;
     height: 555px;
-    margin: 40px 20px;    
+    margin: 40px 60px;    
     border: 1px solid #000;
     background: #FFF;
     position: relative;
@@ -340,4 +340,159 @@ img.book-image{
     position: absolute;
     left: 390px;
     top: 256px;
+}
+
+/* Coffee */
+
+section.coffee-shop{    
+    height: 841px;
+    /* background-color: #BB945F;     */
+}
+
+h2.coffee-shop-h2{
+    padding: 20px 600px;
+    margin: 0;
+    text-align: center;
+    color: #0C0C0E;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+div.coffee-shop-h2-underline{
+    margin: 0 auto;
+    width: 50px;
+    height: 1px;    
+    border-bottom: 1px solid #0C0C0E;    
+}
+
+.coffee-shop-header > p{
+    width: 1440px;
+    height: 120px;
+    /* margin-bottom: 20px;     */
+    margin: 40px 0;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+}
+
+.coffee-shop-menu{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+.coffee-shop-menu1{
+    width: 438px;
+    height: 520px;
+    margin: 0 20px;
+    /* background-color: beige; */
+}
+
+.coffee-shop-menu2{
+    width: 438px;
+    height: 520px;
+    margin: 0 20px;
+    /* background-color: beige; */
+}
+
+.header-menu{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #BB945F;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+
+td {
+
+    /* border: 1px solid grey; */
+
+ }
+
+ table {
+
+    /* border-collapse: collapse; */
+    width: 100%;    
+    }
+
+.c1{
+    padding-top: 40px;
+
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.c2{
+    padding-top: 40px;
+}
+
+.c3{
+    padding-top: 40px;
+
+    color: #000;
+    font-family: Forum;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.table-menu{
+    width: 100px;
+    height: 1px;
+    background: #bb945f;   
+    /* margin: 0 25% 0 25%; */
+}
+
+.header-menu2{
+    width: 317px;
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #BB945F;    
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.c11{
+    padding-top: 40px;    
+    /* margin-left: auto; */
+    text-align: right;
+    color: #000;    
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
 }
