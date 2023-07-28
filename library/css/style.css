@@ -576,3 +576,34 @@ div.our-contacts-h2-underline{
     letter-spacing: 2px;
     text-transform: capitalize;
 }
+
+
+/* -------- Digital library cards --------- */
+
+section.digital-library-cards{
+    height: 614px;
+    /* background-color: #BB945F;     */
+}
+
+h2.digital-library-cards-h2{
+
+    /* padding: 20px 600px; */
+    /* margin: 0; */
+
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 100% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+div.digital-library-cards-h2-underline{
+    margin: 0 auto;
+    width: 50px;
+    height: 1px;    
+    border-bottom: 1px solid #0C0C0E;    
+}
