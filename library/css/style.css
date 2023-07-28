@@ -342,7 +342,7 @@ img.book-image{
     top: 256px;
 }
 
-/* Coffee */
+/* --------- Coffee --------- */
 
 section.coffee-shop{    
     height: 841px;
@@ -488,6 +488,86 @@ td {
     /* margin-left: auto; */
     text-align: right;
     color: #000;    
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+/* -------- Our contacts --------- */
+
+section.our-contacts{
+    height: 575px;
+    /* background-color: #BB945F;     */
+}
+
+h2.our-contacts-h2{
+
+    /* padding: 20px 600px; */
+    /* margin: 0; */
+
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 100% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+div.our-contacts-h2-underline{
+    margin: 0 auto;
+    width: 50px;
+    height: 1px;    
+    border-bottom: 1px solid #0C0C0E;    
+}
+
+.our-contacts-blocks{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 40px;
+    margin-top: 40px;
+}
+
+.our-contacts-block1{
+    width: 704px;
+    height: 414px;
+    margin: 0 20px;
+
+    /* background-color: beige; */
+}
+
+.our-contacts-block1 h3{
+    color: #000;
+    height: 40px;
+    margin-bottom: 40px;
+    /* padding-bottom: 40px; */
+    /* text-align: center; */
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.our-contacts-block2{
+    width: 696px;
+    height: 414px;
+    margin: 0 20px;
+
+    /* background-color: beige; */
+}
+
+.our-contacts-block1 p{
+    color: #000;
+    /* text-align: center; */
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
