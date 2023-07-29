@@ -582,14 +582,13 @@ div.our-contacts-h2-underline{
 
 section.digital-library-cards{
     height: 614px;
-    /* background-color: #BB945F;     */
+    /* background-color: #ecac52;     */
 }
 
 h2.digital-library-cards-h2{
 
-    /* padding: 20px 600px; */
-    /* margin: 0; */
-
+    margin-top: 20px;
+    margin-bottom: 20px;
     color: #0C0C0E;
     text-align: center;
     font-family: Forum;
@@ -607,3 +606,151 @@ div.digital-library-cards-h2-underline{
     height: 1px;    
     border-bottom: 1px solid #0C0C0E;    
 }
+
+.digital-library-cards-blocks{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+.digital-library-cards-block1{
+    width: 600px;
+    /* height: 453px; */
+    height: 386px;
+    margin: 0 20px;
+    /* border: 3px solid #BB945F; */
+    /* background: #FFF; */
+    /* background-color: beige; */
+}
+
+.digital-library-cards-block1 > h3{
+    width: 330px;
+    margin: 0 auto 30px;  
+    color: #000;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+}
+
+.digital-library-cards-block1 form{
+    border: 3px solid #BB945F;
+    background: #FFF;
+}
+
+.input-fields{  
+
+    width: 560px;
+    height: 272px;
+    margin: 20px;
+    background: #BB945F;
+}
+
+.digital-library-cards-block2{
+    width: 695px;
+    height: 533px;
+    margin: 0 20px;
+
+    background-color: beige;
+}
+
+.input-fields p{
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+    color: #000;
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 166.667% */
+    letter-spacing: 0.6px;
+}
+
+.input-fields input{
+    padding: 0 20px;
+    width: 480px;
+    height: 66px;
+    border-radius: 10px;
+    background: #FFF;
+    border: none;
+    margin-left: 20px;
+    margin-bottom: 25px;
+
+    color: #8E8E8E;
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 166.667% */
+    letter-spacing: 0.6px;
+}
+
+.check-the-card-button{
+    margin-left: 179px;
+    margin-bottom: 30px;
+    /* display: block; */
+    padding: 10px 40px;    
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    text-align: center;
+
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+
+.digital-library-cards-block2 > h3{
+    color: #000;
+    text-align: center;
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+
+    text-align: right;
+    margin-bottom: 35px;
+}
+
+.digital-library-cards-block2 > p{
+    color: #000;
+    text-align: right;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 0.4px;
+}
+
+.buttons{
+    text-align: right; 
+}
+
+.buttons > button{
+
+    margin-left: 20px;
+    width: 75px;
+    height: 30px;
+    padding: 10px 0px; 
+
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+
