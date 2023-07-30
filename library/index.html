@@ -20,17 +20,18 @@
 
             <nav class="nav">                
                 <ul class="menu">
-                    <li class="menu-item"><a href="#" class="menu-link">About</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Favorites</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Coffee shop</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Contacts</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Library Card</a></li>
+                    <li class="menu-item"><a href="#about" class="menu-link">About</a></li>
+                    <li class="menu-item"><a href="#favorites" class="menu-link">Favorites</a></li>
+                    <li class="menu-item"><a href="#coffee-shop" class="menu-link">Coffee shop</a></li>
+                    <li class="menu-item"><a href="#our-contacts" class="menu-link">Contacts</a></li>
+                    <li class="menu-item"><a href="#digital-library-cards" class="menu-link">Library Card</a></li>
                 </ul>            
             </nav>                  
 
             <a href="#" class="icon"><img class="icon-img" src="images/icon_profile.svg" alt="Icon profile"></a>
 
-        </header>        
+        </header>
+                
         <main class="main">            
             
             <section class="welcome">
@@ -41,7 +42,7 @@
                 </div>
             </section>
             
-            <section class="about">
+            <section class="about" id="about">
                 <div class="aboutheader">
                     <h2 class="abouth2">About</h2>
                     <div class="abouth2-underline">
@@ -62,7 +63,7 @@
                 </div>                
             </section>
             
-            <section class="favorites">
+            <section class="favorites" id="favorites">
                 
                 <div class="favorites">
                     <h2 class="favoritesh2">Favorites</h2>
@@ -73,7 +74,7 @@
                         <form>
                             <label class="favorites-label">
                                 <input type="radio" name="seasons" value="winter" checked>
-                                Winter
+                                <b>Winter</b>
                             </label>
                             <label class="favorites-label">
                                 <input type="radio" name="seasons" value="spring">
@@ -136,7 +137,7 @@
                             <p class="text-description">A timely and revelatory new biography of Queen Elizabeth
                                                         (and her family) exploring how the Windsors have evolved
                                                         and thrived as the modern world has changed around them.</p>
-                            <button class="button-buy">Buy</button>
+                            <button class="button-own">Own</button>
                             <img class="book-image" src="images/book-4.png" alt="book-4">
                         </div>
 
@@ -145,13 +146,14 @@
                 </div>
             </section>
 
-            <section class="coffee-shop">
+            <section class="coffee-shop" id="coffee-shop">
                 <div class="coffee-shop-header">
                     <h2 class="coffee-shop-h2">Coffee shop</h2>
                     <div class="coffee-shop-h2-underline">
                     </div>
-                    <p>In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation. 
-                        you can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.
+                    <p>In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation.<br>
+                        you can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts<br>
+                        from bakery.
                     </p>
                     
                     <div class="coffee-shop-menu"> <!-- flex -->
@@ -289,7 +291,7 @@
                 </div>                
             </section>
             
-            <section class="our-contacts">
+            <section class="our-contacts" id="our-contacts">
                 <div class="our-contacts-header">
                     <h2 class="our-contacts-h2">Our contacts</h2>
                     <div class="our-contacts-h2-underline">
@@ -303,7 +305,7 @@
                         <p><a href="tel:6177302370">Please call (617) 730-2370</a></p>
                         <p><a href="tel:6177302370">For TTY service, please call (617) 730-2370</a></p>
                         <p><a href="tel:6177302385">Putterham Library: (617) 730-2385</a></p>
-                        <h3>Senior Staff</h3>
+                        <p class="senior-staff">Senior Staff</p>
                         <p>Library Director: <a href="mailto:AmandaHirst@gmail.com"><b>Amanda Hirst</b></a></p>
                     </div>
 
@@ -315,7 +317,7 @@
 
             </section>
 
-            <section class="digital-library-cards">
+            <section class="digital-library-cards" id="digital-library-cards">
 
                 <h2 class="digital-library-cards-h2">Digital Library Cards</h2>
                 <div class="digital-library-cards-h2-underline">
