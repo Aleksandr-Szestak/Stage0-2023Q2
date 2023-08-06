@@ -10,16 +10,14 @@ a{
 body{    
     margin: 0;
     padding: 0;
-    /* background-color: rgb(247, 247, 247); */
-    background-color: bisque;
-    
+    background-color: bisque;    
 }
 
 .container{
-    width: 1440px;
+    /* width: 1440px; */
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0;
-
     background-color: rgb(247,247,247);
 }
 
@@ -30,36 +28,29 @@ body{
     height: 90px;
     background-color: #0C0C0E;
     color: #FFF;
-}
-
-/*
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-*/
-
-ul.menu{
-    display: flex;
-    list-style: none;
-}
-
-li.menu-item{
-    margin: 0;
-    padding-right: 30px;    
+    padding: 0 20px;
 }
 
 .header-header{
+    color: #FFF;
     font-family: Forum;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
-    line-height: 50px;
-    letter-spacing: 0.6px;        
-    /* margin: 20px 0 20px 20px;     */
-    margin: 20px 0 20px 20px;
+    line-height: 50px; /* 166.667% */
+    letter-spacing: 0.6px;
     flex-grow: 1;
+}
+
+ul.menu{
+    margin: 0;
+    padding: 0;
+}
+
+li.menu-item{
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 30px;
 }
 
 .menu-link{
@@ -68,8 +59,6 @@ li.menu-item{
     font-style: normal;
     font-weight: 400;
     line-height: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
     transition: color 1s;
 }
 
@@ -77,9 +66,30 @@ li.menu-item{
   color: #BB945F;
 }
 
-img.icon-img{
-    padding: 0 20px;
+@media (max-width: 1024px) {
+
+    /* .nav{
+        display: none;
+    } */
+
+    li.menu-item{
+        margin-right: 10px;
+    }
+
+    .menu-link{   
+        font-size: 15px;
+        line-height: 40px;    
+    }
+
+    .header{
+        background-color: grey;
+    }   
 }
+
+
+
+
+
 
 section.welcome{
     height: 600px;
@@ -641,7 +651,7 @@ section.digital-library-cards{
 h2.digital-library-cards-h2{
 
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: #0C0C0E;
     text-align: center;
     font-family: Forum;
@@ -672,7 +682,7 @@ div.digital-library-cards-h2-underline{
     width: 600px;
     /* height: 453px; */
     height: 386px;
-    margin: 0 20px;
+    margin: 20px 20px;
     /* border: 3px solid #BB945F; */
     /* background: #FFF; */
     /* background-color: beige; */
@@ -889,10 +899,10 @@ button.check-the-card-button:hover {
     margin: 0;
 }
 
-ul > li{
+/* ul > li{
     display: inline;
     margin-right: 15px;
-}
+} */
 
 .icons-social > a{
     /* display: block-inline; */
