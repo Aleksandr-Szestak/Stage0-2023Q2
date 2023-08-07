@@ -1,3 +1,5 @@
+/* ---------- Common ---------- */
+
 html{
     scroll-behavior: smooth;
 }
@@ -21,6 +23,8 @@ body{
     background-color: rgb(247,247,247);
 }
 
+/* ---------- Header ---------- */
+
 .header{    
     display: flex;
     justify-content: space-between;
@@ -40,6 +44,20 @@ body{
     line-height: 50px; /* 166.667% */
     letter-spacing: 0.6px;
     flex-grow: 1;
+}
+
+.burger{
+    /* display: none; */
+    margin: 0;
+    padding: 0;
+    /* width: 45px; */
+    width: 10px;
+    height: 20px;
+    /* background-color: azure; */
+}
+
+.burger-img{
+    display: none;
 }
 
 ul.menu{
@@ -66,40 +84,17 @@ li.menu-item{
   color: #BB945F;
 }
 
-@media (max-width: 1024px) {
-
-    /* .nav{
-        display: none;
-    } */
-
-    li.menu-item{
-        margin-right: 10px;
-    }
-
-    .menu-link{   
-        font-size: 15px;
-        line-height: 40px;    
-    }
-
-    .header{
-        background-color: grey;
-    }   
-}
-
-
-
-
-
+/* ---------- Welcome ---------- */
 
 section.welcome{
     height: 600px;
-    /* background-color: #BB945F; */
+    max-width: 1440px;
     background-image: url('../images/welcome.png');
     position: relative;
 }
 
 div.overlay{
-    width: 1440px;
+    max-width: 1440px;
     height: 300px;
     background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.10) 100%);    
     position: absolute;
@@ -128,6 +123,67 @@ h2.welcomeh2{
     letter-spacing: 3px;
     text-transform: uppercase;    
 }
+
+/* ---------- Adaptive 1024px ---------- */
+
+@media (max-width: 1024px) {
+
+    li.menu-item{
+        margin-right: 10px;
+    }
+
+    .menu-link{   
+        font-size: 15px;
+        line-height: 35px;    
+    }
+
+    .burger{
+        width: 5px;
+    }
+
+    /* .header{
+        background-color: grey;
+    }    */
+
+}
+
+/* ---------- Adaptive 768px ---------- */
+
+@media (max-width:768px) {
+    /****** Header ******/
+    .burger > a{
+        display: block;
+        height: 22px;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .burger{        
+        margin-left: 40px;
+        width: 45px;
+        height: 20px;
+        order: 1;
+    }
+    
+    .burger-img{
+        display: initial;
+    }
+
+    /****** Welcome ******/
+    
+    section.welcome{
+        height: 600px;
+        max-width: 768px;
+        background-image: url('../images/welcome-768.png');        
+    }  
+
+}
+
+
+
+
 
 section.about{    
     height: 837px;
