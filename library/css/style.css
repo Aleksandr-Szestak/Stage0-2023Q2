@@ -249,6 +249,14 @@ div.button3{
         width: 5px;
     }
 
+    .image-2{
+        display: none; 
+    }
+   
+    .images{
+        /* justify-content: space-around; */
+    }
+
 }
 
 /* ---------- Adaptive 768px ---------- */
@@ -287,6 +295,12 @@ div.button3{
         max-width: 768px;
     }
 
+    /****** About ******/
+
+    .aboutheader > p{
+        max-width: 728px;
+        height: 80px;
+    }
 
 
 }
