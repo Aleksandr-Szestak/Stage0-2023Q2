@@ -109,13 +109,12 @@ div.welcomeheader{
     width: 520px;
     height: 150px;
     padding: 35px 40px;
-    background-color: #0C0C0E;
-    /* position: absolute; */
+    background-color: #0C0C0E;    
     position: relative;
     top: 220px;
 }
 
-h2.welcomeh2{     
+h2.welcomeh2{    
     padding: 0;
     margin: 0;
     color: #FFF;
@@ -128,14 +127,6 @@ h2.welcomeh2{
     letter-spacing: 3px;
     text-transform: uppercase;    
 }
-
-
-/* @media (max-width: 1024px) {
-    section.welcome{
-    max-width: 100%;
-    background-size: contain;
-    }
-} */
 
 /* ---------- Adaptive 1024px ---------- */
 
@@ -153,15 +144,6 @@ h2.welcomeh2{
     .burger{
         width: 5px;
     }
-
-    /* .header{
-        background-color: grey;
-    }    */
-
-    /* section.welcome{
-        max-width: 100%;
-        background-size: contain;
-    } */
 
 }
 
@@ -195,7 +177,13 @@ h2.welcomeh2{
         height: 600px;
         max-width: 768px;
         background-image: url('../images/welcome-768.png');        
-    }  
+    }
+
+    div.overlay{
+        max-width: 768px;
+    }
+
+
 
 }
 
