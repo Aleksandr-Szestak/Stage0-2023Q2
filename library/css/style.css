@@ -167,7 +167,7 @@ div.abouth2-underline{
 }
 
 .images-and-arrows{
-    height: 676px;
+    height: 601px;
 }
 
 .images{
@@ -176,11 +176,11 @@ div.abouth2-underline{
     flex-wrap: nowrap;
     justify-content: space-between;
     padding-right: 20px;
-    padding-left: 20px;    
-    margin: 0;
+    padding-left: 20px;  
+    margin: 0 auto;
 
-    /* background-color: #8E8E8E; */
     max-width: 1440px;
+    height: 560px;
 }
 
 .images > img{
@@ -196,36 +196,42 @@ div.abouth2-underline{
 }
 
 .pagination{
-    width: 68px;
-    /* height: 16px; */
-    margin: 40px auto 0;
+    width: 120px;
+    height: 16px;
+    margin: 25px auto 0;
     display: flex;
-    justify-content: space-between;
-    /* background-color: aqua; */
+    justify-content: center;
+    gap: 10px;
+
 }
 
 .pagination > div{
     width: 16px;
     height: 16px;    
-    border: 5px;
+    border: 5px; 
     border-radius: 50%;        
 }
 
-div.button1{
-    background-color: #0C0C0E;
-}
-
 div.button2{
-    background-color: #BB945F;
+    background-color: #0C0C0E;
 }
 
 div.button3{
     background-color: #BB945F;
 }
 
+div.button4{
+    background-color: #BB945F;
+}
+
 /* ---------- Adaptive 1440px ---------- */
 @media (min-width: 1440px) {
     .images-carret{
+        display: none;
+    }
+
+    .button1,
+    .button5{
         display: none;
     }
 }
@@ -247,6 +253,9 @@ div.button3{
 @media (min-width: 1024px) {
     .images-carret{
         display: none;
+    }
+    .button1
+        display: initial;
     }
 }
 
@@ -326,6 +335,10 @@ div.button3{
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    .button5{
+        display: initial;
     }
 
     /* .images-link{
