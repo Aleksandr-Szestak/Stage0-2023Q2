@@ -291,11 +291,13 @@ div.favoritesh2-underline{
     border-bottom: 1px solid #0C0C0E;    
 }
 
-.favorites > p{
+.favorites > p{    
     margin-top: 40px;
-    color: #000;
-    text-align: left;
+    margin-bottom: 40px;
+    padding-left: 20px;
     margin-left: 20px;
+    color: #000;
+    /* text-align: left; */
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
@@ -303,12 +305,43 @@ div.favoritesh2-underline{
     line-height: normal;
 }
 
-div.radio-seasons{
+/* div.radio-seasons{
     margin-top: 40px;
     margin-left: 20px;    
+} */
+
+.block-radio{
+    display: flex;
+    align-items: center;
+    gap: 90px;
+    margin-left: 40px;
 }
 
-.favorites-label > input{
+/* .block-radio-item{
+    margin-right: 90px;
+} */
+
+.block-radio-item > input{
+    margin-right: 20px;
+    accent-color: black;
+    width: 16px;
+    height: 16px;    
+}
+
+.block-radio-item > label{
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+
+
+/* .favorites-label > input{
     margin-right: 20px;
     accent-color: black;
     width: 16px;
@@ -323,7 +356,7 @@ div.radio-seasons{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
+} */
 
 .bg-description{
     display: flex;
