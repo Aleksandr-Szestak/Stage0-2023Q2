@@ -170,6 +170,10 @@ div.abouth2-underline{
     height: 601px;
 }
 
+.images-carret{
+    display: none;
+}
+
 .images{
     /* display: inline; */
     display: flex;
@@ -184,8 +188,6 @@ div.abouth2-underline{
 }
 
 .images > img{
-    /* width: 450px;
-    height: 560px; */
     margin: 0;
     padding: 0;   
 }
@@ -197,44 +199,70 @@ div.abouth2-underline{
 
 .pagination{
     width: 120px;
-    height: 16px;
+    height: 26px;
     margin: 25px auto 0;
     display: flex;
     justify-content: center;
-    gap: 10px;
-
+    align-items: center;
+    /* gap: 10px; */
 }
 
-.pagination > div{
+.button-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    width:26px;
+    height: 26px;
+    border-radius: 50%;
+    /* background-color: aqua; */
+    cursor: pointer;       
+}
+
+.button-wrapper > div{
     width: 16px;
     height: 16px;    
-    border: 5px; 
-    border-radius: 50%;        
+    /* border: 5px;  */
+    /* padding: 5px; */
+    border-radius: 50%;
+    /* cursor: pointer;        */
 }
 
-div.button2{
+div.wrapper1{
+    visibility: hidden;
+}
+
+div.button1{
+    /* visibility: hidden; */
+    /* background-color: #BB945F; */
     background-color: #0C0C0E;
 }
 
-div.button3{
+div.button2{    
     background-color: #BB945F;
+    /* background-color: #0C0C0E; */
+}
+
+div.button3{
+    /* background-color: #BB945F; */
+    background-color: #0C0C0E;
 }
 
 div.button4{
-    background-color: #BB945F;
+    /* background-color: #BB945F; */
+    background-color: #0C0C0E;
+}
+
+div.wrapper5{
+    visibility: hidden;
+}
+
+div.button5{
+    /* visibility: hidden; */
+    /* background-color: #BB945F; */
+    background-color: #0C0C0E;
 }
 
 /* ---------- Adaptive 1440px ---------- */
-@media (min-width: 1440px) {
-    .images-carret{
-        display: none;
-    }
-
-    .button1,
-    .button5{
-        display: none;
-    }
-}
 
 @media (max-width: 1440px) {
    
@@ -246,18 +274,25 @@ div.button4{
         justify-content: space-around;
     }
 
+    div.wrapper1{
+        visibility: visible;
+    }
 
+    div.button1{
+        background-color: #BB945F;
+        /* visibility: visible;     */
+    }
+
+    div.button2{    
+        background-color: #0C0C0E;
+    }
+
+    .pagination{
+        padding-left: 24px;
+    }
 }
 
 /* ---------- Adaptive 1024px ---------- */
-@media (min-width: 1024px) {
-    .images-carret{
-        display: none;
-    }
-    .button1
-        display: initial;
-    }
-}
 
 @media (max-width: 1024px) {
 
@@ -282,11 +317,40 @@ div.button4{
         /* justify-content: space-around; */
     }
 
+    /****** About ******/
+
     .aboutheader > p{
-        margin: 40px auto 0;
+        margin: 40px auto;
         max-width: 728px;
         height: 80px;
     }
+
+    .images-and-arrows{
+        margin: 0 auto;
+        padding: 0;
+        max-width: 614px;
+        height: 560px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .images-carret{
+        display: initial;
+    }
+
+    .pagination{
+        padding-left: 0;
+    }
+
+    div.wrapper5{
+        visibility: visible;
+    }
+
+    /* div.button5{
+        visibility: visible;
+    }     */
+
 }
 
 /* ---------- Adaptive 768px ---------- */
@@ -337,7 +401,8 @@ div.button4{
         justify-content: space-between;
     }
 
-    .button5{
+    .button5,
+    .button4{
         display: initial;
     }
 
