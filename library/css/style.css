@@ -456,7 +456,162 @@ img.book-image{
 }
 
 
+/* --------- Coffee --------- */
+
+section.coffee-shop{    
+    height: 841px;
+    max-width: 1440px;
+    /* background-color: #BB945F;     */
+}
+
+h2.coffee-shop-h2{
+    margin: 0 auto 20px;
+    /* padding: 20px 600px;
+    margin: 0; */
+    text-align: center;
+    color: #0C0C0E;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+div.coffee-shop-h2-underline{
+    margin: 0 auto;
+    width: 50px;
+    height: 1px;    
+    border-bottom: 1px solid #0C0C0E;    
+}
+
+.coffee-shop-header > p{
+    max-width: 1440px;
+    /* height: 120px; */
+    /* margin-bottom: 20px;     */
+    margin: 40px 0 20px;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+}
+
+.coffee-shop-menu{
+    display: flex;
+    max-width: 1440px;    
+    justify-content: space-between;
+    padding: 20px;
+    padding-bottom: 40px;
+    /* gap: 480px; */
+    gap: 476px;
+}
+
+.coffee-shop-menu1{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.coffee-shop-menu2{   
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+.header-menu{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #BB945F;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+/* --------------------------------- */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.menu-item > p{
+    margin: 0;
+}
+
+.menu-name {
+    width: 199px;
+    color: #000000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.menu-line {
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #BB945F;
+}
+
+.menu-usd {
+    color: #000;
+    font-family: Forum;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.menu-item2 {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 60px;
+}
+
+.menu-item2 > p{
+    margin: 0;
+}
+
+.menu-name2{
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+/* --------------------------------- */
+
+
+
+
+
+/* --------------------------------------*/
 /* ---------- Adaptive 1440px ---------- */
+/* --------------------------------------*/
 
 @media (max-width: 1440px) {
    
@@ -484,6 +639,14 @@ img.book-image{
     .pagination{
         padding-left: 24px;
     }
+
+    .enable-br{
+        display: none;
+    }
+
+    .coffee-shop-menu{
+        gap: 200px;
+    }
 }
 
 /* ---------- Adaptive 1240px ---------- */
@@ -496,6 +659,10 @@ img.book-image{
 
     .book-item{
         margin-left: 69px;
+    }
+
+    .coffee-shop-menu{
+        gap: 50px;
     }
 
 }
@@ -556,10 +723,22 @@ img.book-image{
         visibility: visible;
     }
 
-    /* div.button5{
-        visibility: visible;
-    }     */
+    section.coffee-shop{    
+        height: 1481px;        
+    }
+    
+    .coffee-shop-menu{
+        /* flex-direction: column; */
+        display: block;
+    }
 
+    .coffee-shop-menu1{
+        margin: 0 auto 0 0;
+    }
+    
+    .coffee-shop-menu2{   
+        margin: 40px 0 0 auto;
+    }
 }
 
 /* ---------- Adaptive 768px ---------- */
@@ -659,162 +838,7 @@ img.book-image{
 
 
 
-/* --------- Coffee --------- */
 
-section.coffee-shop{    
-    height: 841px;
-    /* background-color: #BB945F;     */
-}
-
-h2.coffee-shop-h2{
-    padding: 20px 600px;
-    margin: 0;
-    text-align: center;
-    color: #0C0C0E;
-    font-family: Forum;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 40px;
-    letter-spacing: 2px;
-    text-transform: capitalize;
-}
-
-div.coffee-shop-h2-underline{
-    margin: 0 auto;
-    width: 50px;
-    height: 1px;    
-    border-bottom: 1px solid #0C0C0E;    
-}
-
-.coffee-shop-header > p{
-    width: 1440px;
-    height: 120px;
-    /* margin-bottom: 20px;     */
-    margin: 40px 0;
-    color: #000;
-    text-align: center;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 40px;
-    letter-spacing: 2px;
-}
-
-.coffee-shop-menu{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0;
-}
-
-.coffee-shop-menu1{
-    width: 438px;
-    height: 520px;
-    margin: 0 20px;
-    /* background-color: beige; */
-}
-
-.coffee-shop-menu2{
-    width: 438px;
-    height: 520px;
-    margin: 0 20px;
-    /* background-color: beige; */
-}
-
-.header-menu{
-    margin-top: 0;
-    margin-bottom: 0;
-    color: #BB945F;
-    font-family: Forum;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 40px;
-    letter-spacing: 2px;
-    text-transform: capitalize;
-}
-
-
-td {
-
-    /* border: 1px solid grey; */
-
- }
-
- table {
-
-    /* border-collapse: collapse; */
-    width: 100%;    
-    }
-
-.c1{
-    padding-top: 40px;
-
-    color: #000;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 40px; /* 200% */
-    letter-spacing: 2px;
-    text-transform: capitalize;
-}
-
-.c2{
-    padding-top: 40px;
-    padding-right: 20px;
-}
-
-.c3{
-    padding-top: 40px;
-
-    color: #000;
-    font-family: Forum;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 40px; /* 200% */
-    letter-spacing: 2px;
-    text-transform: capitalize;
-}
-
-.table-menu{
-    width: 100px;
-    height: 1px;
-    background: #bb945f;   
-    /* margin: 0 25% 0 25%; */
-}
-
-.header-menu2{
-    width: 317px;
-    margin-left: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    color: #BB945F;    
-    font-family: Forum;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 40px;
-    letter-spacing: 2px;
-    text-transform: capitalize;
-}
-
-.c11{
-    padding-top: 40px;    
-    padding-right: 60px;
-    /* margin-left: auto; */
-    text-align: right;
-    color: #000;    
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 40px; /* 200% */
-    letter-spacing: 2px;
-    text-transform: capitalize;
-}
 
 /* -------- Our contacts --------- */
 
