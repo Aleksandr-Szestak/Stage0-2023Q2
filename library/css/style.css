@@ -934,15 +934,22 @@ div.our-contacts-h2-underline{
 
 }
 
-/* ---------- Adaptive 715px ---------- */
+/* ---------- Adaptive 745px ---------- */
 
-@media (max-width: 715px) {
+@media (max-width: 745px) {
 
-    .our-contacts-block2{
-        /* display: block;
-        width: 500px;
-        height: 297px;                 */
-    }
+.our-contacts-block2{
+    width: 600px;
+    height: 357px;
+}
+
+.our-contacts-block2 > img{
+        width: 95%;
+}
+
+.our-contacts-block1{
+    width: 600px;
+}
 
 }
 
