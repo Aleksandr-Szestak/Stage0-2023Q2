@@ -295,7 +295,7 @@ div.favoritesh2-underline{
     margin-top: 40px;
     margin-bottom: 40px;
     padding-left: 20px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     color: #000;
     /* text-align: left; */
     font-family: Inter;
@@ -314,12 +314,8 @@ div.favoritesh2-underline{
     display: flex;
     align-items: center;
     gap: 90px;
-    margin-left: 40px;
+    margin-left: 20px;
 }
-
-/* .block-radio-item{
-    margin-right: 90px;
-} */
 
 .block-radio-item > input{
     margin-right: 20px;
@@ -337,27 +333,6 @@ div.favoritesh2-underline{
     line-height: normal;
 }
 
-
-
-
-
-/* .favorites-label > input{
-    margin-right: 20px;
-    accent-color: black;
-    width: 16px;
-    height: 16px;    
-}
-
-.favorites-label{
-    margin-right: 70px;
-    color: #000;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-} */
-
 .bg-description{
     display: flex;
     flex-wrap: wrap;
@@ -368,14 +343,14 @@ div.favoritesh2-underline{
 .book-item{
     width: 550px;
     height: 555px;
-    margin: 20px 40px 20px 0;    
+    margin: 20px 40px 18px 0;    
     border: 1px solid #000;
     background: #FFF;
     position: relative;
 }
 
 .book-item > h3{
-    margin: 15px 428px 0px 20px;
+    margin: 12px 428px 0px 20px;
     padding: 0;
     width: 528px;
     height: 40px;
@@ -510,6 +485,21 @@ img.book-image{
         padding-left: 24px;
     }
 }
+
+/* ---------- Adaptive 1240px ---------- */
+
+@media (max-width: 1240px) {
+    
+    section.favorites{
+        height: 2629px;
+    }
+
+    .book-item{
+        margin-left: 69px;
+    }
+
+}
+
 
 /* ---------- Adaptive 1024px ---------- */
 
@@ -653,7 +643,15 @@ img.book-image{
 }
 
 
+/* ---------- Adaptive 700px ---------- */
 
+@media (max-width: 700px) {
+
+    .book-item{
+        margin-left: 10px;
+    }
+
+}
 
 
 
