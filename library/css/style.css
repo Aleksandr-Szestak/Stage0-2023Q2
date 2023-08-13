@@ -700,6 +700,237 @@ div.our-contacts-h2-underline{
     text-transform: capitalize;
 }
 
+/* ---------------------------------------- */
+/* -------- Digital library cards --------- */
+/* ---------------------------------------- */
+
+
+section.digital-library-cards{
+    height: 614px;
+    max-width: 1440px;
+    padding-top: 20px;   
+    /* background-color: #ecac52;     */
+}
+
+h2.digital-library-cards-h2{
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 100% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+div.digital-library-cards-h2-underline{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 50px;
+    height: 1px;    
+    border-bottom: 1px solid #0C0C0E;    
+}
+
+.digital-library-cards-blocks{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.digital-library-cards-block1{
+    width: 600px;
+    height: 453px;
+    /* height: 386px; */
+    margin: 20px 20px;
+    /* border: 3px solid #BB945F; */
+    /* background: #FFF; */
+    /* background-color: beige; */
+
+}
+
+.digital-library-cards-block1 > h3{
+    width: 330px;
+    margin: 0 auto 30px;  
+    color: #000;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+}
+
+.input-fields{  
+
+    width: 594px;
+    height: 380px;
+    /* margin: 20px; */
+    border: 3px solid #BB945F;
+    /* background: #BB945F; */
+}
+
+.form-1{
+    width: 560px;
+    height: 272px;
+    background: #BB945F;
+    margin-top: 17px;
+    margin-left: 17px;
+    margin-bottom: 17px;
+    /* border: 3px solid #BB945F;
+    background: #FFF; */
+    /* box-sizing: border-box; */
+}
+
+.form-1 >p{
+    padding-top: 20px;
+    padding-left: 20px;
+    color: #000;
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+}
+
+
+
+.input-fields p{
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+    color: #000;
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+}
+
+
+.input-fields input{
+    padding: 0 20px;
+    width: 480px;
+    height: 66px;
+    border-radius: 10px;
+    background: #FFF;
+    border: none;
+    margin-left: 20px;
+    margin-bottom: 25px;
+
+    color: #8E8E8E;
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+}
+
+.check-the-card-button{
+    margin-left: 176px;
+    /* margin-top: 3px; */
+    margin-bottom: 27px;
+    /* display: block; */
+    padding: 10px 40px;    
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    text-align: center;
+
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+
+button.check-the-card-button:hover {
+    color: #0c0c0e;
+    background: #bb945f;
+    border: none;
+    transition: 1s;
+}
+
+/* block 2 */
+
+.digital-library-cards-block2{
+    /* width: 695px; */
+
+    width: 456px;
+    height: 253px;
+
+    /* height: 533px; */
+    /* height: 614px; */
+    /* padding: 0; */
+    margin: 0 20px;
+
+    /* background-color: beige; */
+}
+
+.digital-library-cards-block2 > h3{
+    color: #000;
+    /* text-align: center; */
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.digital-library-cards-block2 > p{
+    color: #000;
+    text-align: right;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0.4px;
+    margin-bottom: 35px;
+}
+
+.buttons{
+    text-align: right; 
+}
+
+.buttons > button{
+    /* display: inline-block; */
+
+    margin-left: 17px;
+    width: 75px;
+    height: 30px;
+    /* padding: 10px 0px;  */
+
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+
+.buttons2:hover {
+    color: #0c0c0e;
+    background: #bb945f;
+    border: none;
+    transition: 1s;
+}
 
 
 
@@ -779,6 +1010,56 @@ div.our-contacts-h2-underline{
     }
 
 }
+
+
+/* ---------- Adaptive 1160px ---------- */
+
+@media (max-width: 1160px) {
+    
+    section.digital-library-cards{
+        /* width: 768px; */
+        height: 857px;
+    }
+
+    .digital-library-cards-blocks{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .digital-library-cards-block1{
+        margin-bottom: 0;
+    }
+
+    .digital-library-cards-block2{
+        width: 600px;
+        height: 223px;
+    }
+
+    .digital-library-cards-block2 > h3{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .digital-library-cards-block2 > p{
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .buttons{
+        margin-top: 40px;
+        text-align: center;
+        /* margin-left: 0; */
+    }
+
+    .buttons > button{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}
+
+
+
 
 
 /* ---------- Adaptive 1024px ---------- */
@@ -970,205 +1251,6 @@ div.our-contacts-h2-underline{
 /**********************************************************/
 
 
-/* -------- Digital library cards --------- */
-
-section.digital-library-cards{
-    height: 614px;
-    padding-top: 20px;   
-    /* background-color: #ecac52;     */
-}
-
-h2.digital-library-cards-h2{
-
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #0C0C0E;
-    text-align: center;
-    font-family: Forum;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 40px; /* 100% */
-    letter-spacing: 2px;
-    text-transform: capitalize;
-}
-
-div.digital-library-cards-h2-underline{
-    margin: 0 auto;
-    margin-bottom: 20px;
-    width: 50px;
-    height: 1px;    
-    border-bottom: 1px solid #0C0C0E;    
-}
-
-.digital-library-cards-blocks{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.digital-library-cards-block1{
-    width: 600px;
-    /* height: 453px; */
-    height: 386px;
-    margin: 20px 20px;
-    /* border: 3px solid #BB945F; */
-    /* background: #FFF; */
-    /* background-color: beige; */
-}
-
-.digital-library-cards-block1 > h3{
-    width: 330px;
-    margin: 0 auto 45px;  
-    color: #000;
-    font-family: Inter;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.6px;
-}
-
-.digital-library-cards-block1 form{
-    border: 3px solid #BB945F;
-    background: #FFF;
-}
-
-.input-fields{  
-
-    width: 560px;
-    height: 272px;
-    margin: 20px;
-    background: #BB945F;
-}
-
-button.check-the-card-button:hover {
-    color: #0c0c0e;
-    background: #bb945f;
-    border: none;
-    transition: 1s;
-}
-
-
-.digital-library-cards-block2{
-    width: 695px;
-    /* height: 533px; */
-    /* height: 614px; */
-    /* padding: 0; */
-    margin: 0 20px;
-
-    /* background-color: beige; */
-}
-
-.input-fields p{
-    padding-left: 20px;
-    /* padding-top: 20px; */
-    padding-bottom: 20px;
-    margin: 0;
-    color: #000;
-    font-family: Forum;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 50px; /* 166.667% */
-    letter-spacing: 0.6px;
-}
-
-.input-fields input{
-    padding: 0 20px;
-    width: 480px;
-    height: 66px;
-    border-radius: 10px;
-    background: #FFF;
-    border: none;
-    margin-left: 20px;
-    margin-bottom: 25px;
-
-    color: #8E8E8E;
-    font-family: Forum;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 50px; /* 166.667% */
-    letter-spacing: 0.6px;
-}
-
-.check-the-card-button{
-    margin-left: 179px;
-    margin-bottom: 30px;
-    /* display: block; */
-    padding: 10px 40px;    
-    border-radius: 2px;
-    border: 1px solid #0C0C0E;
-    text-align: center;
-
-    color: #0C0C0E;
-    text-align: center;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 1px;
-}
-
-
-
-.digital-library-cards-block2 > h3{
-    color: #000;
-    text-align: center;
-    font-family: Forum;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.6px;
-
-    text-align: right;
-    margin-top: 0;
-    margin-bottom: 35px;
-}
-
-.digital-library-cards-block2 > p{
-    color: #000;
-    text-align: right;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 40px; /* 200% */
-    letter-spacing: 0.4px;
-    margin-bottom: 40px;
-}
-
-.buttons{
-    text-align: right; 
-}
-
-.buttons > button{
-
-    margin-left: 20px;
-    width: 75px;
-    height: 30px;
-    padding: 10px 0px; 
-
-    color: #0C0C0E;
-    text-align: center;
-    font-family: Inter;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 1px;
-}
-
-.buttons2:hover {
-    color: #0c0c0e;
-    background: #bb945f;
-    border: none;
-    transition: 1s;
-}
 
 /* ---------- footer ---------- */
 
