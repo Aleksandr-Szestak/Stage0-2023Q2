@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter&display=swap" rel="stylesheet">
     <title>Brooklyn Public Library</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -21,13 +22,20 @@
 
             <nav class="nav">                
                 <ul class="menu">
-                    <li class="menu-item"><a href="#about" class="menu-link">About</a></li>
-                    <li class="menu-item"><a href="#favorites" class="menu-link">Favorites</a></li>
-                    <li class="menu-item"><a href="#coffee-shop" class="menu-link">Coffee shop</a></li>
-                    <li class="menu-item"><a href="#our-contacts" class="menu-link">Contacts</a></li>
-                    <li class="menu-item"><a href="#digital-library-cards" class="menu-link">Library Card</a></li>
+                    <li class="menu-item"><a href="#about" class="menu-link">About</a>
+                    <li class="menu-item"><a href="#favorites" class="menu-link">Favorites</a>
+                    <li class="menu-item"><a href="#coffee-shop" class="menu-link">Coffee shop</a>
+                    <li class="menu-item"><a href="#our-contacts" class="menu-link">Contacts</a>
+                    <li class="menu-item"><a href="#digital-library-cards" class="menu-link">Library Card</a>
                 </ul>            
             </nav>                  
+
+            <div class="burger">
+                <!-- <a href="#"><img class="burger-img" src="images/burger.svg" alt="burger"></a> -->
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </div>
 
             <a href="#" class="icon"><img class="icon-img" src="images/icon_profile.svg" alt="Icon profile"></a>
 
@@ -39,11 +47,13 @@
                 <div class="overlay">                    
                 </div>
                 <div class="welcomeheader">
-                    <h2 class="welcomeh2">Welcome<br>to the Brooklyn Library</h2>
+                    <h2 class="welcomeh2">Welcome&nbsp;<br>
+                                          to the Brooklyn Library</h2>
                 </div>
-            </section>
-            
+            </section>            
+
             <section class="about" id="about">
+
                 <div class="aboutheader">
                     <h2 class="abouth2">About</h2>
                     <div class="abouth2-underline">
@@ -51,17 +61,41 @@
                     <p>The Brooklyn Library is a free workspace,
                        a large number of books and a cozy coffee shop inside
                     </p>
-                    <div class="images">
-                        <img src="images/image-1.png" alt="image1">
-                        <img src="images/image-2.png" alt="image2">
-                        <img src="images/image-3.png" alt="image3">
+                    
+                    <div class="images-and-arrows">
+                        
+                        <div class="images-carret">
+                            <a class="images-link" href="#"><img src="images/carret_left.svg" alt="l-arrow"></a>
+                        </div>                        
+                        
+                        <div class="images-and-pagination">
+                            
+                            <div class="images">
+                                <img class="image-1" src="images/image-1.png" alt="image-1">
+                                <img class="image-2" src="images/image-2.png" alt="image-2">
+                                <img class="image-3" src="images/image-3.png" alt="image-3">
+                                <img class="image-4" src="images/image-4.png" alt="image-4">
+                                <img class="image-5" src="images/image-5.png" alt="image-5">
+                            </div>
+                            
+                            <div class="pagination">                                                
+                                <div class="button-wrapper wrapper1"><div class="button1"></div></div>
+                                <div class="button-wrapper wrapper2"><div class="button2"></div></div>
+                                <div class="button-wrapper wrapper3"><div class="button3"></div></div>
+                                <div class="button-wrapper wrapper4"><div class="button4"></div></div>
+                                <div class="button-wrapper wrapper5"><div class="button5"></div></div>
+                            </div>
+
+                        </div>
+
+                        <div class="images-carret">
+                            <a class="images-link" href="#"><img src="images/carret_right.svg" alt="r-arrow"></a>
+                        </div> 
+                        
                     </div>
-                    <div class="pagination">                                                
-                        <div class="button1"></div>
-                        <div class="button2"></div>
-                        <div class="button3"></div>
-                    </div>
-                </div>                
+
+                </div>
+
             </section>
             
             <section class="favorites" id="favorites">
@@ -72,24 +106,35 @@
                     <p>Pick favorites of season</p>                    
                     
                     <div class="radio-seasons">
+
                         <form>
-                            <label class="favorites-label">
-                                <input type="radio" name="seasons" value="winter" checked>
-                                <b>Winter</b>
-                            </label>
-                            <label class="favorites-label">
-                                <input type="radio" name="seasons" value="spring">
-                                Spring
-                            </label>
-                            <label class="favorites-label">
-                                <input type="radio" name="seasons" value="=summer">
-                                Summer
-                            </label>
-                            <label class="favorites-label">
-                                <input type="radio" name="seasons" value="autumn">
-                                Autumn
-                            </label>
+                            
+                            <div class="block-radio">
+                                
+                                <div class="block-radio-item">
+                                    <input type="radio" name="seasons" value="winter" id="winter" checked>
+                                    <label class="favorites-label" for="winter"><b>Winter</b></label>
+                                </div>
+
+                                <div class="block-radio-item">
+                                    <input type="radio" name="seasons" value="spring" id="spring">
+                                    <label class="favorites-label" for="spring">Spring</label>
+                                </div>
+
+                                <div class="block-radio-item">
+                                    <input type="radio" name="seasons" value="summer" id="summer">
+                                    <label class="favorites-label" for="summer">Summer</label>
+                                </div>
+
+                                <div class="block-radio-item">
+                                    <input type="radio" name="seasons" value="autumn" id="autumn">
+                                    <label class="favorites-label" for="autumn">Autumn</label>
+                                </div>  
+
+                            </div>
+
                         </form>
+
                     </div>
 
                     <div class="bg-description">
@@ -151,155 +196,114 @@
                 <div class="coffee-shop-header">
                     <h2 class="coffee-shop-h2">Coffee shop</h2>
                     <div class="coffee-shop-h2-underline">
-                    </div>
-                    <p>In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation.<br>
-                        you can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts<br>
+                    </div>                    
+                    <p>In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation.<br class="enable-br">
+                        You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts<br class="enable-br">
                         from bakery.
                     </p>
                     
-                    <div class="coffee-shop-menu"> <!-- flex -->
-                        
+                    <div class="coffee-shop-menu">
+
                         <div class="coffee-shop-menu1">
                             
                             <h3 class="header-menu">Coffee & Tea</h3>
-                            
-                            <table>
 
-                                <tbody>
-                                    
-                                    <tr>
-                                        <td class="c1">Cold Brew Coffee</td>
-                                        <td class="c2">
-                                            <hr class="table-menu">                                            
-                                        </td>
-                                        <td class="c3">$3</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="c1">French Press Pot</td>
-                                        <td class="c2">
-                                            <hr class="table-menu">
-                                        </td>
-                                        <td class="c3">$5</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="c1">Espresso</td>
-                                        <td class="c2">
-                                            <hr class="table-menu">
-                                        </td>
-                                        <td class="c3">$2</td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td class="c1">Cappuccino</td>
-                                        <td class="c2">
-                                            <hr class="table-menu">
-                                        </td>
-                                        <td class="c3">$4</td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td class="c1">Hot tea</td>
-                                        <td class="c2">
-                                            <hr class="table-menu">
-                                        </td>
-                                        <td class="c3">$2</td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td class="c1">Cold tea</td>
-                                        <td class="c2">
-                                            <hr class="table-menu">
-                                        </td>
-                                        <td class="c3">$2</td>
-                                    </tr>                                    
-
-                                </tbody>
-
-                            </table>
+                            <div class="menu-item">
+                                <p class="menu-name">Cold Brew Coffee</p>
+                                <span class="menu-line"></span>
+                                <p class="menu-usd">$3</p>
+                            </div>
+                        
+                            <div class="menu-item">
+                                <p class="menu-name">French Press Pot</p>
+                                <span class="menu-line"></span>
+                                <p class="menu-usd">$5</p>
+                            </div>
+                        
+                            <div class="menu-item">
+                                <p class="menu-name">Espresso</p>
+                                <span class="menu-line"></span>
+                                <p class="menu-usd">$2</p>
+                            </div>
+                        
+                            <div class="menu-item">
+                                <p class="menu-name">Cappuccino</p>
+                                <span class="menu-line"></span>
+                                <p class="menu-usd">$4</p>
+                            </div>
+                        
+                            <div class="menu-item">
+                                <p class="menu-name">Hot tea</p>
+                                <span class="menu-line"></span>
+                                <p class="menu-usd">$2</p>
+                            </div>
+                        
+                            <div class="menu-item">
+                                <p class="menu-name">Cold tea</p>
+                                <span class="menu-line"></span>
+                                <p class="menu-usd">$2</p>
+                            </div>                        
 
                         </div>
 
                         <div class="coffee-shop-menu2">
                             
-                            <h3 class="header-menu2">Desserts & Cakes</h3>
+                            <!-- <h3 class="header-menu2">Desserts & Cakes</h3> -->
 
-                            <table>
+                            <h3 class="header-menu">Desserts & Cakes</h3>
 
-                                <tbody>
-                                    
-                                    <tr>                                        
-                                        <td class="c11">Forest Gateau</td>
-                                        <td class="c2">
-                                            <hr class="table-menu">                                            
-                                        </td>
-                                        <td class="c3">$16</td>
-                                    </tr>
-
-                                    <tr>
-                                        <!-- <td class="c1 с11">Blue Moon</td> -->
-                                        <td class="c11">Blue Moon</td>
-                                        <td class="c2">
-                                            <hr class="table-menu">                                            
-                                        </td>
-                                        <td class="c3">$16</td>
-                                    </tr>
-
-                                    <tr>
-                                        <!-- <td class="c1 с11">Truffle Cake</td> -->
-                                        <td class="c11">Truffle Cake</td>
-                                        <td class="c2">
-                                            <hr class="table-menu">                                            
-                                        </td>
-                                        <td class="c3">$15</td>
-                                    </tr>
-
-                                    <tr>
-                                        <!-- <td class="c1 с11">Chocolate Cake</td> -->
-                                        <td class="c11">Chocolate Cake</td>
-                                        <td class="c2">
-                                            <hr class="table-menu">                                            
-                                        </td>
-                                        <td class="c3">$18</td>
-                                    </tr>
-
-                                    <tr>
-                                        <!-- <td class="c1 с11">Poet’s Dream Cake</td> -->
-                                        <td class="c11">Poet’s Dream Cake</td>
-                                        <td class="c2">
-                                            <hr class="table-menu">                                            
-                                        </td>
-                                        <td class="c3">$16</td>
-                                    </tr>
-
-                                    <tr>
-                                        <!-- <td class="c1 с11">Pineapple Cake</td> -->
-                                        <td class="c11">Pineapple Cake</td>
-                                        <td class="c2">
-                                            <hr class="table-menu">                                            
-                                        </td>
-                                        <td class="c3">$14</td>
-                                    </tr>
-
-                                </tbody>
-
-                            </table>
+                            <div class="menu-item2">
+                                <p class="menu-name2">Forest Gateau</p>
+                                <span class="menu-line"></span>
+                                <p class="menu-usd">$16</p>
+                            </div>
+                            
+                            <div class="menu-item2">
+                                <p class="menu-name2">Blue Moon</p>
+                                <span class="menu-line"></span>
+                                <p class="menu-usd">$16</p>
+                            </div>
+                            
+                            <div class="menu-item2">
+                                <p class="menu-name2">Truffle Cake</p>
+                                <span class="menu-line"></span>
+                                <p class="menu-usd">$15</p>
+                            </div>
+                            
+                            <div class="menu-item2">
+                                <p class="menu-name2">Chocolate Cake</p>
+                                <span class="menu-line"></span>
+                                <p class="menu-usd">$18</p>
+                            </div>
+                            
+                            <div class="menu-item2">
+                                <p class="menu-name2">Poet’s Dream Cake</p>
+                                <span class="menu-line"></span>
+                                <p class="menu-usd">$16</p>
+                            </div>
+                            
+                            <div class="menu-item2">
+                                <p class="menu-name2">Pineapple Cake</p>
+                                <span class="menu-line"></span>
+                                <p class="menu-usd">$14</p>
+                            </div>                         
 
                         </div>
+
                     </div>
 
                 </div>                
             </section>
             
             <section class="our-contacts" id="our-contacts">
+                
                 <div class="our-contacts-header">
                     <h2 class="our-contacts-h2">Our contacts</h2>
                     <div class="our-contacts-h2-underline">
                     </div>
                 </div>
                 
-                <div class="our-contacts-blocks"> <!-- flex -->
+                <div class="our-contacts-blocks">
                        
                     <div class="our-contacts-block1">
                         <h3>For all Library inquiries:</h3>
@@ -324,59 +328,77 @@
                 <div class="digital-library-cards-h2-underline">
                 </div>                
 
-                <div class="digital-library-cards-blocks"> <!-- flex -->
+                <div class="digital-library-cards-blocks">
                        
                     <div class="digital-library-cards-block1">
+                        
                         <h3>Find your Library card</h3>
-                        <form action="#">
-                            
-                            <div class="input-fields">
-                               <p>Brooklyn Public Library</p>
-                               <input type="text" placeholder="Reader's name">
-                               <br>
-                               <input type="number" placeholder="Card number">
-                            </div>
+                        
+                        <div class="input-fields">
+                        
+                            <form class="form-0" action="#">
+                                
+                                <div class="form-1">
+                                    <p>Brooklyn Public Library</p>
+                                    <input type="text" placeholder="Reader's name">
+                                    <br>
+                                    <input type="number" placeholder="Card number">
+                                </div>                        
 
-                            <button class="check-the-card-button">
-                                Check the card
-                            </button>
+                                <button class="check-the-card-button">
+                                    Check the card
+                                </button>
 
-                        </form>
+                            </form>
+
+                        </div>
+
                     </div>
 
                     <div class="digital-library-cards-block2">
+                        
                         <h3>Get a reader card</h3>
-                        <p>You will be able to see a reader card after<br>
+
+                        <!-- <p>You will be able to see a reader card after<br>
                            logging into account or you can register a new<br>
                            account
-                        </p>
+                        </p> -->
+
+                        <p>You will be able to see a reader card after logging into
+                             account or you can register a new account
+                        </p>                        
                        
-                        <!-- <div class="buttons"> -->
-                            <form class="buttons" action="#">
+                        <form action="#">
+                            <div class="buttons">
                                 <button class="buttons2">Sign Up</button>                        
                                 <button class="buttons2">Log in</button>
-                            </form>
-                        <!-- </div> -->
+                            </div>
+                        </form>
 
                     </div>
 
                 </div>
 
             </section>
+
         </main>
 
         <footer class="footer">
+            
             <div class="footer-part1">
+
                 <p class="address">
                     <a href="https://www.google.com/search?q=286+Cadman+Plaza%2C+New+York%2C+NY+11238%2C+United+States">
                     286 Cadman Plaza, New York,<br>
                     NY 11238, United States
                     </a>
                 </p>
+
                 <p class="working-hours">
                     Mon - Fri<br>
                     08:00 am - 07:00 pm
                 </p>
+
             </div>
 
             <div class="footer-part2">
@@ -394,12 +416,12 @@
                     </a></li>
 
                 </ul>
-
                 
                 <p class="working-days">
                     Sat - Sun<br>
                     10:00 am - 06:00 pm
                 </p>
+
             </div>
 
             <hr>
