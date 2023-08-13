@@ -48,8 +48,10 @@ body{
 
 .burger{
     /* display: none; */
+    visibility:hidden;
     margin: 0;
     padding: 0;
+    border: none;
     /* width: 45px; */
     width: 10px;
     height: 20px;
@@ -57,7 +59,7 @@ body{
 }
 
 .burger-img{
-    display: none;
+    /* display: none; */
 }
 
 ul.menu{
@@ -1200,7 +1202,67 @@ ul > li{
 
 @media (max-width: 1024px) {
 
-    li.menu-item{
+    /****** Header ******/
+
+    .nav{
+        display: none;
+    }
+
+    .burger{  
+        visibility: visible;
+        cursor: pointer;   
+        margin-left: 40px;
+        width: 45px;
+        height: 20px;
+        order: 1;
+
+        background-color: aqua;
+        background-color: transparent;
+        position: relative;
+    }
+
+    .burger-line{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: #FFF;
+        height: 2px;
+        transition: 1s ease;
+    }
+
+    .burger-line:nth-child(1){
+        top: 0;
+    }
+
+    .burger-line:nth-child(2){
+        top: 9px;
+    }
+
+    .burger-line:nth-child(3){
+        top: 19px;
+    }
+
+    .menu-open .burger-line:nth-child(1){
+        top: 9px;
+        transform: rotate(135deg);
+    }
+    
+    .menu-open .burger-line:nth-child(2){
+        transform: scaleX(0);
+    }
+
+    .menu-open .burger-line:nth-child(3){
+        top: 9px;
+        transform: rotate(-135deg);
+    }
+
+    .burger-img{
+        /* display: initial; */
+        /* visibility: visible; */
+    }
+
+
+    /* li.menu-item{
         margin-right: 10px;
     }
 
@@ -1211,7 +1273,7 @@ ul > li{
 
     .burger{
         width: 5px;
-    }
+    } */
 
     .image-2{
         display: none; 
@@ -1272,26 +1334,7 @@ ul > li{
 /* ---------- Adaptive 768px ---------- */
 
 @media (max-width:768px) {
-    /****** Header ******/
-    .burger > a{
-        display: block;
-        height: 22px;
-    }
 
-    .nav{
-        display: none;
-    }
-
-    .burger{        
-        margin-left: 40px;
-        width: 45px;
-        height: 20px;
-        order: 1;
-    }
-    
-    .burger-img{
-        display: initial;
-    }
 
     /****** Welcome ******/
     
