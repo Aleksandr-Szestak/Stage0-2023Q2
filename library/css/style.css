@@ -1,5 +1,4 @@
-/* ---------- Common ---------- */
-
+/*#region common */
 html{
     scroll-behavior: smooth;
 }
@@ -22,9 +21,9 @@ body{
     padding: 0;
     background-color: rgb(247,247,247);
 }
+/*#endregion*/
 
-/* ---------- Header ---------- */
-
+/*#region Header */
 .header{    
     display: flex;
     justify-content: space-between;
@@ -85,8 +84,9 @@ li.menu-item{
 .menu-link:hover{  
   color: #BB945F;
 }
+/*#endregion*/
 
-/* ---------- Welcome ---------- */
+/*#region Welcome */
 
 section.welcome{
     height: 600px;
@@ -125,9 +125,9 @@ h2.welcomeh2{
     letter-spacing: 3px;
     text-transform: uppercase;    
 }
+/*#endregion*/
 
-/* ---------- About ---------- */
-
+/*#region About */
 section.about{ 
     height: 837px;
     max-width: 1440px;
@@ -263,9 +263,9 @@ div.button5{
     /* background-color: #BB945F; */
     background-color: #0C0C0E;
 }
+/*#endregion*/
 
-
-/********* Favorites **********/
+/*#region Favorites */
 
 section.favorites{
     height: 1439px;
@@ -456,9 +456,9 @@ img.book-image{
     left: 390px;
     top: 256px;
 }
+/*#endregion*/
 
-
-/* --------- Coffee --------- */
+/*#region Coffee */
 
 section.coffee-shop{    
     height: 841px;
@@ -605,11 +605,9 @@ div.coffee-shop-h2-underline{
     letter-spacing: 2px;
     text-transform: capitalize;
 }
+/*#endregion*/
 
-/* ------------------------------- */
-/* -------- Our contacts --------- */
-/* ------------------------------- */
-
+/*#region Our contacts */
 
 section.our-contacts{
     height: 575px;
@@ -701,11 +699,9 @@ div.our-contacts-h2-underline{
     letter-spacing: 2px;
     text-transform: capitalize;
 }
+/*#endregion*/
 
-/* ---------------------------------------- */
-/* -------- Digital library cards --------- */
-/* ---------------------------------------- */
-
+/*#region Digital library cards */
 
 section.digital-library-cards{
     height: 614px;
@@ -933,11 +929,9 @@ button.check-the-card-button:hover {
     border: none;
     transition: 1s;
 }
+/*#endregion*/
 
-/*----------------------------- */
-/* ---------- footer ---------- */
-/*----------------------------- */
-
+/*#region Footer */
 
 .footer{    
     height: 230px;
@@ -1065,10 +1059,9 @@ ul > li{
     line-height: 20px; /* 200% */
     letter-spacing: 2px;
 }
+/*#endregion*/
 
-/* --------------------------------------*/
-/* ---------- Adaptive 1440px ---------- */
-/* --------------------------------------*/
+/*#region Adaptive 1440px */
 
 @media (max-width: 1440px) {
    
@@ -1105,8 +1098,9 @@ ul > li{
         gap: 200px;
     }
 }
+/*#endregion*/
 
-/* ---------- Adaptive 1260px ---------- */
+/*#region Adaptive 1260px */
 
 @media (max-width: 1260px) {
 
@@ -1124,8 +1118,9 @@ ul > li{
     }
 
 }
+/*#endregion*/
 
-/* ---------- Adaptive 1240px ---------- */
+/*#region Adaptive 1240px */
 
 @media (max-width: 1240px) {
     
@@ -1142,9 +1137,9 @@ ul > li{
     }
 
 }
+/*#endregion*/
 
-
-/* ---------- Adaptive 1160px ---------- */
+/*#region Adaptive 1160px */
 
 @media (max-width: 1160px) {
     
@@ -1189,12 +1184,9 @@ ul > li{
     }
 
 }
+/*#endregion*/
 
-
-
-
-
-/* ---------- Adaptive 1024px ---------- */
+/*#region Adaptive 1024px */
 
 @media (max-width: 1024px) {
 
@@ -1326,11 +1318,11 @@ ul > li{
         margin: 40px 0 0 auto;
     }
 }
+/*#endregion*/
 
-/* ---------- Adaptive 768px ---------- */
+/*#region Adaptive 768px */
 
 @media (max-width:768px) {
-
 
     /****** Welcome ******/
     
@@ -1387,8 +1379,9 @@ ul > li{
 
 
 }
+/*#endregion*/
 
-/* ---------- Adaptive 745px ---------- */
+/*#region Adaptive 745px */
 
 @media (max-width: 745px) {
 
@@ -1411,9 +1404,9 @@ ul > li{
 }
 
 }
+/*#endregion*/
 
-
-/* ---------- Adaptive 700px ---------- */
+/*#region Adaptive 700px */
 
 @media (max-width: 700px) {
 
@@ -1426,13 +1419,4 @@ ul > li{
     
     }
 }
-
-
-
-
-/**********************************************************/
-
-
-
-=======
-
+/*#endregion*/
