@@ -1,9 +1,9 @@
 const burger = document.querySelector(".burger");
 
 burger.addEventListener('click', ()=>{
-    document.querySelector('header').classList.toggle('menu-open')
+    document.querySelector('ul').classList.toggle('burger-menu-open');
+    document.querySelector('.burger').classList.toggle('burger-open');
 });
-
 
 console.log('Вёрстка:');
 console.log('1) соответствует макету 24/26');
