@@ -1,3 +1,4 @@
+/* ----------- burger --------------- */
 let burger = document.querySelector(".burger");
 
 burger.addEventListener('click', ()=>{
@@ -5,25 +6,26 @@ burger.addEventListener('click', ()=>{
     document.querySelector('.burger').classList.toggle('burger-open');
 });
 
-// Получаем slide1, slide2, slide3
-let btnSlide1 = document.getElementById("slide1");
-let btnSlide2 = document.getElementById("slide2");
-let btnSlide3 = document.getElementById("slide3");
 
-if (btnSlide1.checked) {
-      console.log('Checkbox1 is checked');
-    } 
-else if (btnSlide2.checked){
-      console.log('Checkbox2 is not checked');
-    }
-else if (btnSlide3.checked){
-      console.log('Checkbox3 is not checked');
-    }   
+/* ----------- slider --------------- */
+let button_wrapper = document.querySelectorAll('.button-wrapper');
+let slider_images = document.querySelector('.images');
+let left_pos = (screen.width >= 1440) ? 930 : 880;
+
+button_wrapper.forEach((butt, idx) => {
+	butt.addEventListener('click', () => {
+		if (screen.width >= 1440) {
+			left_pos = 476 * idx;
+			slider_images.style.left = -left_pos + 'px';
+		} else {
+			left_pos = -(450 * (idx - 2)) - 20;
+			slider_images.style.left = left_pos + 'px';
+		}
+	})
+})
 
 
-
-
-
+/* ----------- console --------------- */
 /*
 console.log('Вёрстка:');
 console.log('1) соответствует макету 24/26');
