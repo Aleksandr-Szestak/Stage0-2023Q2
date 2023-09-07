@@ -187,6 +187,11 @@ div.abouth2-underline{
 }
 
 .images-carret{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: aqua;
     display: none;
 }
 

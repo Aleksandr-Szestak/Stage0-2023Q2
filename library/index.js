@@ -8,43 +8,42 @@ burger.addEventListener('click', ()=>{
 
 
 /* ----------- slider --------------- */
+const image_width = 450;
+const image_gap = 25;
+const image_s = image_width + image_gap;
+
 let button_wrapper = document.querySelectorAll('.button-wrapper');
 let slider_images = document.querySelector('.images');
+
+let l_arrow = document.querySelector('.l-arrow');
+let r_arrow = document.querySelector('.r-arrow');
+
 var left_pos = 0;
-// var left_pos = (screen.width >= 1440) ? 930 : 880;
-// console.log(button_wrapper.length, left_pos);
 
-/*
-button_wrapper.forEach((butt, idx) => {
-	butt.addEventListener('click', () => {
-		const image_width = 450;
-		const image_gap = 25;
+l_arrow.addEventListener('click', ()=>{
+	if (left_pos >= image_s){
+		left_pos -= image_s;
+		slider_images.style.left = -left_pos + 'px';		
+	}
+	console.log(left_pos);
+});
 
-		let lpp;
-		if (screen.width >= 1440) {
-			lpp=left_pos;
-			// left_pos = (image_width + 25 + 1) * idx;
-			left_pos = (image_width + image_gap) * idx;
-			slider_images.style.left = -left_pos + 'px';
-			console.log('>=1440', lpp, left_pos);
-		} 
-		else {
-			lpp=left_pos;
-			// left_pos = -(image_width * (idx - 2)) - 20;
-			left_pos = (image_width + image_gap) * idx;
-			console.log('<1440',lpp,left_pos);
-			slider_images.style.left = -left_pos + 'px';
-		}
-	})
-})
-*/
+r_arrow.addEventListener('click', ()=>{
+	if (left_pos < image_s * 4){
+		left_pos += image_s;
+		slider_images.style.left = -left_pos + 'px';		
+	}
+	console.log(left_pos);
+});
 
 button_wrapper.forEach((butt, idx) => {
 	butt.addEventListener('click', () => {
-		const image_width = 450;
-		const image_gap = 25;
+		// const image_width = 450;
+		// const image_gap = 25;
 
-		left_pos = (image_width + image_gap) * idx;
+		// left_pos = (image_width + image_gap) * idx;
+		left_pos = image_s * idx;
+
 		slider_images.style.left = -left_pos + 'px';
 		console.log(left_pos);
 	})
