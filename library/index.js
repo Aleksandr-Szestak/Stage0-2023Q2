@@ -10,20 +10,45 @@ burger.addEventListener('click', ()=>{
 /* ----------- slider --------------- */
 let button_wrapper = document.querySelectorAll('.button-wrapper');
 let slider_images = document.querySelector('.images');
-let left_pos = (screen.width >= 1440) ? 930 : 880;
+var left_pos = 0;
+// var left_pos = (screen.width >= 1440) ? 930 : 880;
+// console.log(button_wrapper.length, left_pos);
 
+/*
 button_wrapper.forEach((butt, idx) => {
 	butt.addEventListener('click', () => {
+		const image_width = 450;
+		const image_gap = 25;
+
+		let lpp;
 		if (screen.width >= 1440) {
-			left_pos = 476 * idx;
+			lpp=left_pos;
+			// left_pos = (image_width + 25 + 1) * idx;
+			left_pos = (image_width + image_gap) * idx;
 			slider_images.style.left = -left_pos + 'px';
-		} else {
-			left_pos = -(450 * (idx - 2)) - 20;
-			slider_images.style.left = left_pos + 'px';
+			console.log('>=1440', lpp, left_pos);
+		} 
+		else {
+			lpp=left_pos;
+			// left_pos = -(image_width * (idx - 2)) - 20;
+			left_pos = (image_width + image_gap) * idx;
+			console.log('<1440',lpp,left_pos);
+			slider_images.style.left = -left_pos + 'px';
 		}
 	})
 })
+*/
 
+button_wrapper.forEach((butt, idx) => {
+	butt.addEventListener('click', () => {
+		const image_width = 450;
+		const image_gap = 25;
+
+		left_pos = (image_width + image_gap) * idx;
+		slider_images.style.left = -left_pos + 'px';
+		console.log(left_pos);
+	})
+})
 
 /* ----------- console --------------- */
 /*

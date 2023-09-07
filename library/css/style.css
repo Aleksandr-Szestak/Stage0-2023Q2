@@ -22,6 +22,11 @@ body{
     background-color: rgb(247,247,247);
     overflow: hidden;
 }
+
+/* *, *::before, *::after {
+    box-sizing: border-box; 
+  } */
+
 /*#endregion*/
 
 /*#region Header */
@@ -137,7 +142,7 @@ h2.welcomeh2{
 section.about{ 
     height: 837px;
     max-width: 1440px;
-    box-sizing: border-box;
+    box-sizing: border-box;    
 }
 
 h2.abouth2{
@@ -175,20 +180,43 @@ div.abouth2-underline{
 }
 
 .images-and-arrows{
-    /* height: 601px; */
+    margin: 0 auto;
+    display: flex;
+    height: 601px;
+    /* height: 676px; */
 }
 
 .images-carret{
     display: none;
 }
 
-#viewport {
-    width: 1400px;
-    /* width: 450px;
-    height: 560px; */
-    overflow: hidden;
+.button4,
+.button5 {
+    display: none;
 }
 
+#btn4,
+#btn5 {
+    display: none;
+}
+
+.images-and-pagination{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-left: auto;
+    margin-right: auto;
+    /* height: 676px; */
+    height: 601px;
+    max-width: 1400px;
+}
+
+.viewport {
+    width: 1400px;
+    /* height: 560px; */
+    min-height: 560px;
+    overflow: hidden;
+}
 
 .images{
     position: relative;
@@ -198,18 +226,13 @@ div.abouth2-underline{
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    padding-right: 20px;
-    padding-left: 20px;  
+    /* padding-right: 20px;
+    padding-left: 20px;   */
     margin: 0 auto;
 
-    max-width: 1440px;
-    /* max-width: 1400px; */
+    max-width: 1400px;
     height: 560px;
-
-    /* overflow: hidden; */
-
     gap: 25px;
-
 }
 
 .images > img{
@@ -220,11 +243,6 @@ div.abouth2-underline{
     transition-property: all;
     transition-duration: 1s;
 }
-
-/* .image-4,
-.image-5{
-    display: none;
-} */
 
 /* -------------------------------------- */
 
@@ -241,7 +259,6 @@ div.abouth2-underline{
     display: flex;
     justify-content: center;
     align-items: center;
-
     /* background-color: aqua; */
 }
 
@@ -268,110 +285,17 @@ div.abouth2-underline{
 }
 
 /* переключение шариков */
-
 #slide1:checked ~ .controls .button-wrapper .button1,
 #slide2:checked ~ .controls .button-wrapper .button2,
-#slide3:checked ~ .controls .button-wrapper .button3 {
+#slide3:checked ~ .controls .button-wrapper .button3,
+#slide4:checked ~ .controls .button-wrapper .button4,
+#slide5:checked ~ .controls .button-wrapper .button5
+ {
     cursor: auto;
     background-color: #BB945F;
     transition: background ease-in-out .2s;
 }
 
-/* 1 */
-#slide1:checked ~ .images > .image-4,
-#slide1:checked ~ .images > .image-5 {
-    /* display: none; */
-    /* transform: scale(0); */
-}
-#slide1:checked ~ .images > .image-1,
-#slide1:checked ~ .images > .image-2,
-#slide1:checked ~ .images > .image-3 {
-    /* display: initial; */
-    /* transform: scale(1); */
-}
-
-/* 2 */
-#slide2:checked ~ .images > .image-1,
-#slide2:checked ~ .images > .image-5 {    
-    /* display: none;     */
-    /* transform: scale(0);     */
-}
-#slide2:checked ~ .images > .image-2,
-#slide2:checked ~ .images > .image-3,
-#slide2:checked ~ .images > .image-4 {
-    /* display: initial; */
-    /* transform: scale(1); */
-}
-
-/* 3 */
-#slide3:checked ~ .images > .image-1,
-#slide3:checked ~ .images > .image-2 {    
-    /* display: none; */
-    /* transform: scale(0); */
-}
-#slide3:checked ~ .images > .image-3,
-#slide3:checked ~ .images > .image-4,
-#slide3:checked ~ .images > .image-5 {
-    /* display: initial; */
-    /* transform: scale(1); */
-}
-
-/* -------------------------------------- */
-
-/* .pagination{
-    width: 120px;
-    height: 26px;
-    margin: 35px auto 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-/* .button-wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    width:26px;
-    height: 26px;
-    border-radius: 50%;
-    cursor: pointer;       
-} */
-
-/* .button-wrapper > div{
-    width: 16px;
-    height: 16px;    
-    border-radius: 50%;
-} */
-
-/* div.wrapper1{
-    visibility: hidden;
-} */
-
-
- /* div.button1{
-    background-color: #BB945F;
-}
-
-div.button2{    
-    background-color: #0C0C0E;
-}
-
-div.button3{
-    background-color: #0C0C0E;
-} */
-
-/*
-div.button4{
-    background-color: #0C0C0E;
-}
-
-div.wrapper5{
-    visibility: hidden;
-}
-
-div.button5{
-    background-color: #0C0C0E;
-} */
 
 /*#endregion*/
 
@@ -1169,32 +1093,24 @@ ul > li{
 /*#region Adaptive 1440px */
 
 @media (max-width: 1440px) {
-   
-    .image-3{
-        display: none; 
+
+    .button4,
+    .button5 {
+        display: flex;
     }
-   
-    .images{
-        justify-content: space-around;
+    
+    #btn4,
+    #btn5 {
+        display: flex;
     }
 
-    div.wrapper1{
-        visibility: visible;
+    .viewport {
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        /* background-color: antiquewhite; */
     }
-
-    div.button1{
-        background-color: #BB945F;
-        /* visibility: visible;     */
-    }
-
-    div.button2{    
-        background-color: #0C0C0E;
-    }
-
-    .pagination{
-        padding-left: 24px;
-    }
-
+ 
     .enable-br{
         display: none;
     }
@@ -1294,7 +1210,7 @@ ul > li{
 /*#region Adaptive 1024px */
 @media (max-width: 1024px) {
 
-    /****** Header ******/
+    /*#region ***** Header *****/
     .header {
         position: relative;
     }
@@ -1387,22 +1303,12 @@ ul > li{
         top: 9px;
         transform: rotate(-135deg);
     }
-    /* ------------------------------------ */
+    /*#endregion*/
     
-    
-    
-    .image-2{
-        display: none; 
-    }
-    
-    .images{
-        /* justify-content: space-around; */
-    }
-
-    /****** About ******/
+    /*#region ***** About *****/
 
     .aboutheader > p{
-        margin: 40px auto;
+        margin: 40px auto 20px;
         max-width: 728px;
         height: 80px;
     }
@@ -1411,8 +1317,9 @@ ul > li{
         margin: 0 auto;
         padding: 0;
         max-width: 614px;
-        height: 560px;
-        display: flex;
+        /* height: 560px; */
+        height: 601px;
+        /* display: flex; */
         align-items: center;
         justify-content: space-between;
     }
@@ -1420,14 +1327,7 @@ ul > li{
     .images-carret{
         display: initial;
     }
-
-    .pagination{
-        padding-left: 0;
-    }
-
-    div.wrapper5{
-        visibility: visible;
-    }
+    /*#endregion*/
 
     section.coffee-shop{    
         height: 1481px;        
@@ -1452,7 +1352,7 @@ ul > li{
 
 @media (max-width:768px) {
 
-    /****** Welcome ******/
+    /*#region ***** Welcome *****/
     
     section.welcome{
         height: 600px;
@@ -1463,48 +1363,30 @@ ul > li{
     div.overlay{
         max-width: 768px;
     }
+    /*#endregion*/
 
-    /****** About ******/
+    /*#region ***** About *****/
 
     .images-and-arrows{
-        margin: 0 auto;
-        padding: 0;
-        max-width: 614px;
-        height: 560px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        margin: 0 auto;
+        padding: 0;
+        max-width: 614px;
+        height: 601px;
     }
 
-    .button5,
+    /* .button5,
     .button4{
         display: initial;
-    }
-
-    /* .images-link{
-        transition: color 2s;
-    } */
-
-    /* .images-carret{
-        padding: 0;
-        margin: 5px;
-        border-radius: 50%;
-    } */
-
-    /* .images-carret:hover{
-        background-color: #BB945F;
-           
     } */
 
     .images-carret{
         display: initial;
     }
-
-    /* .aboutheader > p{
-        max-width: 728px;
-        height: 80px;
-    } */
-
+    /*#endregion */
 
 }
 /*#endregion*/
