@@ -383,6 +383,11 @@ div.favoritesh2-underline{
     border: 1px solid #000;
     background: #FFF;
     position: relative;
+    opacity: 0;
+}
+
+.book-item-enable{
+    opacity: 1;
 }
 
 .book-item > h3{

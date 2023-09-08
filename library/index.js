@@ -75,6 +75,10 @@ button_wrapper.forEach((butt, idx) => {
 	})
 })
 
+/* ----------- fade --------------- */
+let all_books = document.querySelectorAll('.book-item');
+
+
 /* ----------- console --------------- */
 /*
 console.log('Вёрстка:');
