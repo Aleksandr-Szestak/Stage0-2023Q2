@@ -191,7 +191,7 @@ div.abouth2-underline{
     height: 24px;
     border-radius: 50%;
     cursor: pointer;
-    background-color: aqua;
+    /* background-color: aqua; */
     display: none;
 }
 
@@ -1332,6 +1332,16 @@ ul > li{
     .images-carret{
         display: initial;
     }
+
+    .cursor-off{
+        opacity: 0.3;
+    }
+
+    .cursor-off:hover{
+        cursor: default;
+        /* background-color: #8E8E8E; */
+    }
+
     /*#endregion*/
 
     section.coffee-shop{    

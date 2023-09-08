@@ -18,33 +18,59 @@ let slider_images = document.querySelector('.images');
 let l_arrow = document.querySelector('.l-arrow');
 let r_arrow = document.querySelector('.r-arrow');
 
-var left_pos = 0;
+let radio_about = document.getElementsByName('point');
 
+var left_pos = 0;
+document.querySelector('.l-arrow').classList.add('cursor-off');
+
+//--------------------------------------------------------------
 l_arrow.addEventListener('click', ()=>{
 	if (left_pos >= image_s){
 		left_pos -= image_s;
 		slider_images.style.left = -left_pos + 'px';		
+		radio_about[left_pos / image_s].checked = true;
+		document.querySelector('.r-arrow').classList.remove('cursor-off');
+		if (left_pos == 0){
+			document.querySelector('.l-arrow').classList.add('cursor-off');
+		}
 	}
 	console.log(left_pos);
 });
 
+//--------------------------------------------------------------
 r_arrow.addEventListener('click', ()=>{
 	if (left_pos < image_s * 4){
 		left_pos += image_s;
 		slider_images.style.left = -left_pos + 'px';		
+		radio_about[left_pos / image_s].checked = true;
+		document.querySelector('.l-arrow').classList.remove('cursor-off');
+		if (left_pos == image_s * 4){
+			document.querySelector('.r-arrow').classList.add('cursor-off');
+		}
 	}
 	console.log(left_pos);
 });
 
+//--------------------------------------------------------------
 button_wrapper.forEach((butt, idx) => {
 	butt.addEventListener('click', () => {
-		// const image_width = 450;
-		// const image_gap = 25;
-
-		// left_pos = (image_width + image_gap) * idx;
 		left_pos = image_s * idx;
-
 		slider_images.style.left = -left_pos + 'px';
+
+		if (idx == 0){
+			document.querySelector('.l-arrow').classList.add('cursor-off');
+		}
+		else{
+			document.querySelector('.l-arrow').classList.remove('cursor-off');
+		}
+
+		if (idx == 4){
+			document.querySelector('.r-arrow').classList.add('cursor-off');
+		}
+		else{
+			document.querySelector('.r-arrow').classList.remove('cursor-off');
+		}
+
 		console.log(left_pos);
 	})
 })
