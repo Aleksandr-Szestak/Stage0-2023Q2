@@ -107,15 +107,10 @@ radio_seasons.forEach((butt, idx) => {
 });
 
 
-
-
-
-
 /* ----------- console --------------- */
-/*
-console.log('Вёрстка:');
-console.log('1) соответствует макету 24/26');
-console.log('2) не появл.полоса прокрутки 12/12');
-console.log('3) бургер-меню 0/12');
-console.log('всего баллов - 36/50');
-*/
+
+console.log('Library part3:');
+console.log('1) Section About(25/25)');
+console.log('2) Section Favorites (21/23)');
+console.log('Summary - 46/200');
+
