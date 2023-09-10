@@ -77,6 +77,38 @@ button_wrapper.forEach((butt, idx) => {
 
 /* ----------- fade --------------- */
 let all_books = document.querySelectorAll('.book-item');
+// console.log('len',all_books.length);
+let radio_seasons = document.getElementsByName('seasons');
+// console.log('len seasons',radio_seasons.length);
+
+radio_seasons.forEach((butt, idx) => {
+	
+	butt.addEventListener('change', () => {
+		let i, j;
+		
+		for(i=0; i<all_books.length; i++){
+			all_books[i].classList.add('book-item-disable');
+		}
+		
+		for (i=0; i<radio_seasons.length; i++) {
+			if (radio_seasons[i].checked) {
+				console.log('Выбран '+i+' сезон');				
+
+				for(j=i*4; j<(i*4)+4; j++){
+					all_books[j].classList.remove('book-item-disable');
+					console.log(j);
+				}
+
+			}
+
+		}
+ });
+
+});
+
+
+
+
 
 
 /* ----------- console --------------- */
