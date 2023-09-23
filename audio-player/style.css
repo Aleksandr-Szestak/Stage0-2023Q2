@@ -1,0 +1,45 @@
+* {  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: bisque;    
+}
+
+.container {
+    height: 80vh;
+    width: 90vw;
+    margin: 10vh auto;
+    background-color: gray;
+    /* overflow: hidden; */
+    position: relative;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer{
+    background-color: rgb(248, 133, 133);
+    margin-top: 15px;
+  }
+
+  .footer-inner{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px;
+  }
+  
+  .logo{
+    display: contents;  
+  }
+  
+  .logo > img{
+    margin: 0;
+    width: 100px;
+  }
+  
+
