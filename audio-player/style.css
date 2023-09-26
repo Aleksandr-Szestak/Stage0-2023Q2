@@ -42,6 +42,11 @@ body {
   align-items: center;
 }
 
+.icon-button {
+  background-image: url("./assets/start.png");
+  background-size: 100px 100px;
+}
+
 /* .img{  
   border-radius: 1em;
 } */
