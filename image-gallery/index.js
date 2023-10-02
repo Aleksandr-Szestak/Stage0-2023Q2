@@ -73,12 +73,14 @@ search.addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13) {
 
-        let image0 = document.querySelector(".image0");
-        // image0.append(img0);
-        //image0.remove();
-        // console.log(search.value);
+        let image_remove = document.querySelectorAll('.gallery-img');
+        image_remove.forEach( (img, idx) => {
+          img.remove();
+        });
+
         url = url0 + url1 + String(search.value) + '&' + url2;
         getData();
+        
     }
 });
 
