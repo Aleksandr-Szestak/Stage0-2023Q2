@@ -66,6 +66,26 @@ body {
   letter-spacing: 2.5px;
 }
 
+.input-field{
+  display:inline;
+  position:relative;
+}
+  
+.input-field .close {
+  font-size: 1.2em;
+  position: absolute;
+  padding: 0 10px;
+  right: 0;
+} 
+
+.input-field > input {
+  padding-left: 10px;
+}
+
+.input-field .close:hover {
+  cursor: pointer;
+} 
+
 .main{
   height: 100%;
   width: 100%;
