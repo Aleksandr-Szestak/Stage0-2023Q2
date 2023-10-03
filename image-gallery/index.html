@@ -18,7 +18,12 @@
             <h1 class="header-header">Image Gallery API</h1>
             <label>
                 Search:
-                <input id="mysearch" type="text" size="40" placeholder="input text">
+                <div class="input-field">
+                    <input id="mysearch" type="text" size="40" placeholder="input text" autocomplete="off">
+                    <span class="close" onclick="this.previousElementSibling.value = ''">
+                        &times;
+                    </span>                      
+                </div>
             </label>
         </header>
 
