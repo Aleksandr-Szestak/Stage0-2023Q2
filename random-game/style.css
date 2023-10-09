@@ -25,9 +25,10 @@ canvas{
     margin: 0 auto;
     /* background-color: gray; */
 
-    border:2px solid yellow;
+    border:2px solid goldenrod;
 }
 
+/*#region footer */
 .footer{
     background-color: gray;
     margin-top: 15px;
@@ -68,3 +69,4 @@ canvas{
   .footer-inner > span{
     margin-left: 25px;
   }
+  /*#endregion*/
