@@ -6,38 +6,12 @@ const stepGrid = 30;
 const gapBorder = 3;
 const amountX = Math.trunc(canvas.width / stepGrid);
 const amountY = Math.trunc(canvas.height / stepGrid);
-
-let i;
-
-ctx.strokeStyle = 'red';
-ctx.setLineDash([2,1]);
 //------------------------------------------------
-ctx.beginPath();
-//вертикальная линия
-// ctx.moveTo(10, 50);  
-// ctx.lineTo(10, 500); //вниз
+drawGameArea();
 
-//горизонтальная линия
-// ctx.moveTo(10, 50);  
-// ctx.lineTo(500, 50); //вправо
-//
-//console.log(amountX);
-for(i=0; i<=amountX; i++){
-    ctx.moveTo(stepGrid * (i+1), gapBorder);  
-    ctx.lineTo(stepGrid * (i+1), canvas.height - gapBorder);
-}
-
-for(i=0; i<=amountY; i++){
-    ctx.moveTo(gapBorder, stepGrid * (i+1));  
-    ctx.lineTo(canvas.width - gapBorder, stepGrid * (i+1));
-}
-
-ctx.stroke();
-//------------------------------------------------
 const starImg = new Image();
 starImg.src = './assets/star.png';
-
-console.log(starImg);
+// console.log(starImg);
 
 let star = {
 	x: Math.floor((Math.random() * amountX)) * stepGrid,
@@ -50,24 +24,64 @@ snake[0] = {
 	y: Math.trunc(amountY / 2) * stepGrid
 };
 
+document.addEventListener("keydown", direction);
+let dir;
+
+
 //------------------------------------------------
 let gameProcess = setInterval(gameSnake,300);
 
 
 
 
-//------------------------------------------------
+//===========================================================
+function drawGameArea(){
+let i;
+
+ctx.strokeStyle = 'red';
+ctx.setLineDash([2,1]);
+
+ctx.beginPath();
+
+for(i=0; i<=amountX; i++){
+    ctx.moveTo(stepGrid * (i+1), gapBorder);  
+    ctx.lineTo(stepGrid * (i+1), canvas.height - gapBorder);
+}
+
+for(i=0; i<=amountY; i++){
+    ctx.moveTo(gapBorder, stepGrid * (i+1));  
+    ctx.lineTo(canvas.width - gapBorder, stepGrid * (i+1));
+}
+
+ctx.stroke();
+
+return;
+}
+
+
+
+//===========================================================
+function direction(event) {
+let key = event.keyCode;
+
+if(key == 37 && dir != "right")
+    dir = "left";
+else if(key == 38 && dir != "down")
+    dir = "up";
+else if(key == 39 && dir != "left")
+    dir = "right";
+else if(key == 40 && dir != "up")
+    dir = "down";
+
+return;
+}
+
+
+
+//===========================================================
 function gameSnake(){
-    // let i;
-    // for(i=0; i<=amountX; i++){
-    //     ctx.moveTo(stepGrid * (i+1), gapBorder);  
-    //     ctx.lineTo(stepGrid * (i+1), canvas.height - gapBorder);
-    // }
-    
-    // for(i=0; i<=amountY; i++){
-    //     ctx.moveTo(gapBorder, stepGrid * (i+1));  
-    //     ctx.lineTo(canvas.width - gapBorder, stepGrid * (i+1));
-    // }
+
+    // drawGameArea();
 
     ctx.drawImage(starImg, star.x, star.y);
 
@@ -76,5 +90,30 @@ function gameSnake(){
         ctx.fillStyle = "green";
 		ctx.fillRect(snake[i].x, snake[i].y, stepGrid, stepGrid);
 	}
+    //-------------------------
+    let snakeX = snake[0].x;
+	let snakeY = snake[0].y;
 
+    snake.pop();
+
+    // console.log(dir);
+
+    if(dir == "left")
+        snakeX -= stepGrid;
+	else if(dir == "right") 
+        snakeX += stepGrid;
+	else if(dir == "up") 
+        snakeY -= stepGrid;
+	else if(dir == "down") 
+        snakeY += stepGrid;
+
+    let newHead = {
+        x: snakeX,
+        y: snakeY
+    };
+
+    snake.unshift(newHead);
+    //-------------------------
+
+return;
 }
