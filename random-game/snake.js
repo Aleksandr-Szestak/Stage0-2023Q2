@@ -50,11 +50,24 @@ function gameSnake(){
     let snakeX = snake[0].x;
 	let snakeY = snake[0].y;
 
-    // ctx.fillStyle = "black";
-    // ctx.fillRect(snake[0].x, snake[0].y, stepGrid, stepGrid);
- 
-    
-    snake.pop();
+	if(snakeX == star.x && snakeY == star.y) {
+		// score++;
+
+        star = {
+            x: Math.floor((Math.random() * amountX)) * stepGrid,
+            y: Math.floor((Math.random() * amountY)) * stepGrid,
+        };
+	} 
+    else{
+        ctx.fillStyle = "white";
+        ctx.fillRect(snake[snake.length-1].x+1, snake[snake.length-1].y+1, stepGrid-2, stepGrid-2);
+        snake.pop();
+    }
+    //-------------------------
+    // ctx.fillStyle = "white";
+    // ctx.fillRect(snake[snake.length-1].x+1, snake[snake.length-1].y+1, stepGrid-2, stepGrid-2);
+     
+    // snake.pop();
 
     if(dir == "left")
         snakeX -= stepGrid;
@@ -71,6 +84,8 @@ function gameSnake(){
     };
 
     snake.unshift(newHead);
+    ctx.fillStyle = "green";
+    ctx.fillRect(snake[0].x+1, snake[0].y+1, stepGrid-2, stepGrid-2);
 
     //-------------------------
 
