@@ -1,11 +1,12 @@
 //===========================================================
-const canvas = document.querySelector('canvas');
+const canvas = document.getElementById("snake")
 const ctx = canvas.getContext('2d');
 
 const stepGrid = 30;
 const gapBorder = 3;
 const amountX = Math.trunc(canvas.width / stepGrid);
 const amountY = Math.trunc(canvas.height / stepGrid);
+const speedGame = 250;
 //------------------------------------------------
 drawGameArea();
 
@@ -27,7 +28,7 @@ let dir;
 
 document.addEventListener("keydown", direction);
 //------------------------------------------------
-let gameProcess = setInterval(gameSnake,300);
+let gameProcess = setInterval(gameSnake,speedGame);
 //end of program
 
 
@@ -35,15 +36,8 @@ let gameProcess = setInterval(gameSnake,300);
 //===========================================================
 function gameSnake(){
 
-    // drawGameArea();
-
     ctx.drawImage(starImg, star.x, star.y);
-
-    for(let i = 0; i < snake.length; i++) {
-        // console.log(i);
-        ctx.fillStyle = "#52d402";
-		ctx.fillRect(snake[i].x+1, snake[i].y+1, stepGrid-2, stepGrid-2);
-	}
+    drawSnake("#52d402");
     //-------------------------
     let snakeX = snake[0].x;
 	let snakeY = snake[0].y;
@@ -57,8 +51,7 @@ function gameSnake(){
         };
 	} 
     else{
-        ctx.fillStyle = "white";
-        ctx.fillRect(snake[snake.length-1].x+1, snake[snake.length-1].y+1, stepGrid-2, stepGrid-2);
+        drawRect(snake.length-1,"white");
         snake.pop();
     }
     
@@ -74,35 +67,58 @@ function gameSnake(){
     //--- выход за границы игрового поля ---
     if ( snakeX < 0 || snakeX >= stepGrid * amountX ||
 	     snakeY < 0 || snakeY >= stepGrid * amountY ) {
-        // console.log(snakeX, stepGrid, amountX, stepGrid*amountX);
+        drawSnake("red");
 		clearInterval(gameProcess);
     }
     //-------------------------
-
     let newHead = {
         x: snakeX,
         y: snakeY
     };
 
-    testTail(newHead, snake);
-
-    snake.unshift(newHead);
-    ctx.fillStyle = "#2e7501"; //"green";
-    ctx.fillRect(snake[0].x+1, snake[0].y+1, stepGrid-2, stepGrid-2);
-
+    if (! testTail(newHead, snake)) {
+        snake.unshift(newHead);
+        drawRect(0,"#2e7501");
+    }
     //-------------------------
 
 return;
 }
 
 
+
 //===========================================================
 function testTail(head, arr) {
+let rez = false;
 	for(let i = 0; i < arr.length; i++) {
-		if(head.x == arr[i].x && head.y == arr[i].y)
+		if(head.x == arr[i].x && head.y == arr[i].y){
+            drawSnake("red");
 			clearInterval(gameProcess);
+            rez = true;
+        }
 	}
+ return rez;
 }
+
+
+
+//===========================================================
+function drawSnake(clr){
+    for(let i = 0; i < snake.length; i++) {
+        drawRect(i,clr);
+	}
+return;
+}
+
+
+
+//===========================================================
+function drawRect(idx,clr){
+    ctx.fillStyle = clr;
+    ctx.fillRect(snake[idx].x+1, snake[idx].y+1, stepGrid-2, stepGrid-2);    
+return;
+}
+
 
 
 //===========================================================
@@ -114,12 +130,12 @@ ctx.setLineDash([2,1]);
 
 ctx.beginPath();
 
-for(i=0; i<=amountX; i++){
+for(i=0; i<amountX; i++){
     ctx.moveTo(stepGrid * (i+1), gapBorder);  
     ctx.lineTo(stepGrid * (i+1), canvas.height - gapBorder);
 }
 
-for(i=0; i<=amountY; i++){
+for(i=0; i<amountY; i++){
     ctx.moveTo(gapBorder, stepGrid * (i+1));  
     ctx.lineTo(canvas.width - gapBorder, stepGrid * (i+1));
 }
