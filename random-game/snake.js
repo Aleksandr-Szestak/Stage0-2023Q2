@@ -40,10 +40,8 @@ function gameSnake(){
     ctx.drawImage(starImg, star.x, star.y);
 
     for(let i = 0; i < snake.length; i++) {
-        console.log(i);
-		// ctx.fillStyle = i == 0 ? "green" : "red";
-        ctx.lineJoin = "round";
-        ctx.fillStyle = "green";
+        // console.log(i);
+        ctx.fillStyle = "#52d402";
 		ctx.fillRect(snake[i].x+1, snake[i].y+1, stepGrid-2, stepGrid-2);
 	}
     //-------------------------
@@ -63,12 +61,7 @@ function gameSnake(){
         ctx.fillRect(snake[snake.length-1].x+1, snake[snake.length-1].y+1, stepGrid-2, stepGrid-2);
         snake.pop();
     }
-    //-------------------------
-    // ctx.fillStyle = "white";
-    // ctx.fillRect(snake[snake.length-1].x+1, snake[snake.length-1].y+1, stepGrid-2, stepGrid-2);
-     
-    // snake.pop();
-
+    
     if(dir == "left")
         snakeX -= stepGrid;
 	else if(dir == "right") 
@@ -78,13 +71,23 @@ function gameSnake(){
 	else if(dir == "down") 
         snakeY += stepGrid;
 
+    //--- выход за границы игрового поля ---
+    if ( snakeX < 0 || snakeX >= stepGrid * amountX ||
+	     snakeY < 0 || snakeY >= stepGrid * amountY ) {
+        // console.log(snakeX, stepGrid, amountX, stepGrid*amountX);
+		clearInterval(gameProcess);
+    }
+    //-------------------------
+
     let newHead = {
         x: snakeX,
         y: snakeY
     };
 
+    testTail(newHead, snake);
+
     snake.unshift(newHead);
-    ctx.fillStyle = "green";
+    ctx.fillStyle = "#2e7501"; //"green";
     ctx.fillRect(snake[0].x+1, snake[0].y+1, stepGrid-2, stepGrid-2);
 
     //-------------------------
@@ -92,6 +95,14 @@ function gameSnake(){
 return;
 }
 
+
+//===========================================================
+function testTail(head, arr) {
+	for(let i = 0; i < arr.length; i++) {
+		if(head.x == arr[i].x && head.y == arr[i].y)
+			clearInterval(gameProcess);
+	}
+}
 
 
 //===========================================================
