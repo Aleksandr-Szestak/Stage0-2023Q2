@@ -5,8 +5,8 @@
 }
 
 body {
-    /* background-color: black; */
-    background-color: white;
+    background-color: black;
+    /* background-color: white; */
 
     font-size: 1.5rem;
     color: goldenrod;
@@ -33,7 +33,7 @@ h1{
 #score{
   display: block;
   margin: 0 auto;
-  background-color: gray;
+  /* background-color: gray; */
 
   /* border:2px solid goldenrod; */
 }

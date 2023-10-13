@@ -5,7 +5,7 @@ const ctx1 = canvas1.getContext('2d');
 const canvas2 = document.getElementById("score")
 const ctx2 = canvas2.getContext('2d');
 
-const stepGrid = 30;
+const stepGrid = 32;
 const gapBorder = 3;
 const amountX = Math.trunc(canvas1.width / stepGrid);
 const amountY = Math.trunc(canvas1.height / stepGrid);
@@ -60,14 +60,17 @@ function gameSnake(){
         };
 	} 
     else{
-        drawRect(snake.length-1,"white");
+        drawRect(snake.length-1,"black");
         snake.pop();
     }
     
-    ctx2.clearRect(10, 10, stepGrid*9, stepGrid);
-    ctx2.fillStyle = "white";
+    ctx2.clearRect(10, 10, stepGrid*20, stepGrid);
+    ctx2.fillStyle = "#52d402";
 	ctx2.font = "30px Pixelify Sans";
-	ctx2.fillText('Score '+String(score).padStart(3, '0') , stepGrid, stepGrid);
+	if (dir == "")
+        ctx2.fillText('Press <space> key to start game' , stepGrid/2, stepGrid);
+    else
+        ctx2.fillText('Score '+String(score).padStart(3, '0') , stepGrid/2, stepGrid);
     
     if(dir == "left")
         snakeX -= stepGrid;
