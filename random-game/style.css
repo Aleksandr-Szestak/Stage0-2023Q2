@@ -22,12 +22,20 @@ h1{
     margin-top: 0;
 }
 
-canvas{
+#snake{
     display: block;
     margin: 0 auto;
     /* background-color: gray; */
 
     border:2px solid goldenrod;
+}
+
+#score{
+  display: block;
+  margin: 0 auto;
+  background-color: gray;
+
+  /* border:2px solid goldenrod; */
 }
 
 /*#region footer */
