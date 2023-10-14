@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 body {
     background-color: black;
     /* background-color: white; */
@@ -16,10 +20,26 @@ body {
     letter-spacing: 2.5px;  
 }
 
+.main{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 h1{
+    /* height: 100px; */
     font-weight: 400;
     text-align: center;
     margin-top: 0;
+}
+
+.snake{
+  height: 612px;
+}
+
+.score{
+  height: 50px;
 }
 
 #snake{
@@ -38,9 +58,15 @@ h1{
   /* border:2px solid goldenrod; */
 }
 
+/* .false-block{
+  margin: 0;
+  padding: 0;
+  height: calc(100vh - 100px - 612px - 65px);
+} */
+
 /*#region footer */
 .footer{
-    background-color: gray;
+    background-color: #2e7501;
     margin-top: 15px;
     font-size: 1.5em;
     /* color: brown; */

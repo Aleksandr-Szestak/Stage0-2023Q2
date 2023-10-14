@@ -186,3 +186,8 @@ else{
 
 return;
 }
+
+
+
+//===========================================================
+document.onkeydown = event => !(event.keyCode>=32 && event.keyCode<=40);
