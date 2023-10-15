@@ -27,11 +27,29 @@ snake[0] = {
 	y: (Math.trunc(amountY / 2)-1) * stepGrid
 };
 //------------------------------------------------
-let score = 0;
+var score = 0;
 
-let tableScores = {
-    scores: [0,0,0,0,0, 0,0,0,0,0],
+var highScore = 0;
+
+var tableScores;
+
+let fromLocalStorage = localStorage.getItem("gameSave");
+
+if (fromLocalStorage == null){
+
+    localStorage.setItem("gameSave", JSON.stringify( 
+        {
+            scores: [0,0,0,0,0, 0,0,0,0,0]
+        }));
+    tableScores = JSON.parse(localStorage.getItem("gameSave"));
 }
+else{
+    tableScores = JSON.parse(fromLocalStorage);
+    highScore = Math.max(...tableScores.scores);    
+}
+
+console.log(tableScores.scores, highScore);
+
 //------------------------------------------------
 let dir="";
 
@@ -69,9 +87,11 @@ function gameSnake(){
 	ctx2.font = "30px Pixelify Sans";
 	if (dir == "")
         ctx2.fillText('Press <space> key to start game' , stepGrid/2, stepGrid);
-    else
-        ctx2.fillText('Score '+String(score).padStart(3, '0') , stepGrid/2, stepGrid);
-    
+    else{
+        ctx2.fillText('Score '+String(score).padStart(3, '0'),stepGrid/2, stepGrid);
+        ctx2.fillText('High score '+String(highScore).padStart(3, '0'),stepGrid*11, stepGrid);
+    }
+
     if(dir == "left")
         snakeX -= stepGrid;
 	else if(dir == "right") 
@@ -85,7 +105,8 @@ function gameSnake(){
     if ( snakeX < 0 || snakeX >= stepGrid * amountX ||
 	     snakeY < 0 || snakeY >= stepGrid * amountY ) {
         drawSnake("red");
-		clearInterval(gameProcess);
+        clearInterval(gameProcess);
+        gameOver();
     }
     //-------------------------
     let newHead = {
@@ -111,11 +132,63 @@ let rez = false;
 		if(head.x == arr[i].x && head.y == arr[i].y){
             drawSnake("red");
 			clearInterval(gameProcess);
+            gameOver();
             rez = true;
         }
 	}
  return rez;
 }
+
+
+
+//===========================================================
+function gameOver(){
+let minArr = minInArray(tableScores.scores);
+let i;
+
+if (score > tableScores.scores[minArr]){
+    tableScores.scores[minArr] = score; 
+
+    localStorage.setItem("gameSave", JSON.stringify( tableScores));
+    // highScore = Math.max(...tableScores.scores);    
+}
+
+// ctx1.clearRect(gapBorder, gapBorder, canvas1.width, canvas1.height);
+
+ctx1.fillStyle = "rgba(255,165,0,0.5)"
+ctx1.fillRect(gapBorder, gapBorder, canvas1.width-gapBorder, canvas1.height-gapBorder);
+
+ctx1.fillStyle = "#52d402";
+ctx1.font = "35px Pixelify Sans";
+ctx1.fillText('---- High scores ----' , stepGrid * 5, stepGrid);
+
+let arrCopy = tableScores.scores;
+arrCopy.sort((a, b) => b - a);
+
+for (i=0; i<10; i++){
+    ctx1.fillText(` ${i+1}... ${arrCopy[i]}  points` , stepGrid * 6, stepGrid*(i+3)); 
+}
+
+ctx1.fillText('Press <F5> for new game' , stepGrid * 2, stepGrid*(i+8));
+
+return;
+}
+
+
+//===========================================================
+function minInArray(arr){
+let minIndex = 0 , minimum = arr[0];
+
+    for (let i=1; i<arr.length; i++) {
+        if(arr[i] < minimum) {
+            minimum = arr[i];
+            minIndex = i;
+        }
+    }
+
+return minIndex;
+}
+    
 
 
 
