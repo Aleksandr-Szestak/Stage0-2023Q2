@@ -254,6 +254,7 @@ if (dir == ""){
         dir = ['up','right','down','left'][Math.floor(Math.random() * 4 )];
         currentAudio = arrAudio[Math.floor(Math.random() * 3 )];
         currentAudio.currentTime = 0;
+        currentAudio.loop = true;
         currentAudio.play();
     }
 }
