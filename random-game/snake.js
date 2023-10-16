@@ -10,6 +10,12 @@ const gapBorder = 3;
 const amountX = Math.trunc(canvas1.width / stepGrid);
 const amountY = Math.trunc(canvas1.height / stepGrid);
 const speedGame = 250;
+
+const audio1 = new Audio("./assets/01.ogg");
+const audio2 = new Audio("./assets/02.ogg");
+const audio3 = new Audio("./assets/03.ogg");
+const arrAudio = [audio1, audio2, audio3];
+let currentAudio;
 //------------------------------------------------
 drawGameArea();
 
@@ -171,6 +177,8 @@ for (i=0; i<10; i++){
 
 ctx1.fillText('Press <F5> for new game' , stepGrid * 2, stepGrid*(i+8));
 
+currentAudio.pause();
+
 return;
 }
 
@@ -243,7 +251,10 @@ let key = event.keyCode;
 
 if (dir == ""){
     if (key == 32){
-        dir = ['up','right','down','left'][Math.ceil(Math.random() / 0.25)];
+        dir = ['up','right','down','left'][Math.floor(Math.random() * 4 )];
+        currentAudio = arrAudio[Math.floor(Math.random() * 3 )];
+        currentAudio.currentTime = 0;
+        currentAudio.play();
     }
 }
 else{
